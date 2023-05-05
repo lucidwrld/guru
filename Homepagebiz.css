@@ -1,0 +1,4961 @@
+body {
+ margin: 0;
+ padding: 0;
+ overflow-y: scroll;
+ scroll-behavior: smooth;
+ box-sizing: border-box;
+}
+
+.cont {
+ margin: 0;
+ padding: 0;
+}
+
+a {
+ text-decoration: none;
+}
+
+.navbar {
+ width: 100%;
+ height: 15vh;
+ box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.08);
+ display: flex;
+ margin: 0;
+ padding: 0;
+ z-index: 8;
+ flex-direction: row;
+}
+
+.navbar .tabs button {
+ display: none;
+}
+
+.tabdrop {
+ display: none;
+}
+
+.navbar .logo {
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 200px;
+}
+
+.navbar .logo h1 {
+ color: #2a3;
+ font-size: 28.172px;
+ font-family: pacifico;
+ font-weight: 400 !important;
+}
+
+.navbar .tabs {
+ height: 100%;
+ padding: 0px;
+ margin: 0px;
+ width: 499px;
+ margin-right: 130px;
+}
+
+.navbar .tabs ul {
+ height: 100%;
+ list-style-type: none;
+ display: flex;
+ text-decoration: none;
+ align-items: center;
+ flex-direction: row;
+ font-family: Roboto;
+ justify-content: space-between;
+ width: 100%;
+}
+
+.navbar .tabs ul li {
+ width: 90px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 40px;
+}
+
+.navbar .tabs ul li a {
+ color: #2A3855;
+ font-size: 15px;
+}
+
+.navbar .tabs ul li a:hover {
+ color: #3049A1;
+}
+
+.navbar .tabs ul li .active {
+ color: #3049A1;
+}
+
+
+.navbar .sidebuttons {
+ height: 100%;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
+ width: 350px;
+}
+
+.navbar .sidebuttons .searchfa {
+ width: 50px;
+ height: 45px;
+ font-size: 14px;
+ color: grey;
+}
+
+.navbar .sidebuttons .searchfa:hover {
+ color: #1a1b29;
+}
+
+.navbar .sidebuttons .userfa {
+ width: 110px;
+ border: 1px solid rgba(128, 128, 128, 0.205);
+ border-radius: 10px;
+ height: 45px;
+ font-size: 14px;
+}
+
+.navbar .sidebuttons .userfa:hover {
+ border: 1px solid #171f91;
+ color: #171f91;
+}
+
+.navbar .sidebuttons .plusfa {
+ width: 150px;
+ border: 0;
+ font-size: 14px;
+ border-radius: 10px;
+ height: 45px;
+ background-color: #3049A1;
+ color: #FFFFFF;
+}
+
+
+
+.fa-user {
+ margin-left: 8px;
+ color: #444752;
+}
+
+.fa-plus {
+ margin-right: 10px;
+}
+
+.searchover {
+ position: absolute;
+ background-color: #00000031;
+ width: 100%;
+ z-index: 10;
+ top: 0;
+ height: 100%;
+ transition: 0.3s linear;
+ transform: translateY(-100%);
+
+
+}
+
+.searchover .navbar {
+ width: 100%;
+ height: 27vh;
+ z-index: 11;
+ background-color: #FFFFFF;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: row;
+}
+
+.close {
+ width: 100%;
+ display: flex;
+ justify-content: right;
+ height: 30px;
+}
+
+.searchover .navbar .fa-times-circle {
+ font-size: 30px;
+}
+
+.searchover .navbar .fa-times-circle:hover {
+ rotate: 190deg;
+ transition: 0.3s linear;
+}
+
+.searchover .navbar .seac {
+ width: 950px;
+ height: 15vh;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.searchover .navbar .seac .seacon {
+ background-color: #FFFFFF;
+ height: 10vh;
+ width: 800px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-around;
+ border-radius: 10px;
+ box-shadow: 0px 1px 25px 1px rgba(0, 0, 0, 0.322);
+}
+
+.searchover .navbar .seac .seacon input {
+ background-color: #FFFFFF;
+ height: 7vh;
+ outline: none;
+ border: 0px;
+ border-bottom: 2px solid #e1e4ec;
+ width: 254px;
+ color: #444752;
+
+}
+
+.searchover .navbar .seac .seacon .dropdown-toggle {
+ background-color: #FFFFFF;
+ height: 7vh;
+ outline: none;
+ display: flex;
+ align-items: center;
+ justify-content: left;
+ justify-content: space-between;
+ border: 0px;
+ border-bottom: 2px solid #e1e4ec;
+ width: 244px;
+ color: #444752;
+
+}
+
+.searchover .navbar .seac .seacon .dropdown-togglec {
+ background-color: #FFFFFF;
+ height: 7vh;
+ outline: none;
+ display: flex;
+ align-items: center;
+ justify-content: left;
+ justify-content: space-between;
+ border: 0px;
+ border-bottom: 2px solid #e1e4ec;
+ width: 244px;
+ color: #444752;
+
+}
+
+
+
+.searchover .navbar .seac .searbtn {
+ width: 111px;
+ height: 45px;
+ background-color: #3049A1;
+ color: #FFFFFF;
+ border-radius: 10px;
+}
+
+.dropdown {
+ position: relative;
+ display: inline-block;
+}
+
+.dropdown-menu {
+ display: none;
+ width: 340px;
+ height: 330px;
+ position: absolute;
+ z-index: 1;
+}
+
+.dropdown-menu input {
+ width: 310px !important;
+ background-color: #FFFFFF !important;
+ height: 35px !important;
+ margin-top: 7px !important;
+ margin-left: 4%;
+ border-radius: 5px !important;
+ border: 2px solid #4447522f !important;
+ padding: 0.5rem !important;
+ margin-bottom: 7px !important;
+ box-sizing: border-box;
+}
+
+#dropdown-options {
+ height: 259px;
+ width: 100%;
+ overflow-y: scroll;
+}
+
+#dropdown-options li {
+ height: 35px;
+ width: 100%;
+ margin-bottom: 10px;
+}
+
+
+
+.dropdownc {
+ position: relative;
+ display: inline-block;
+}
+
+.dropdown-menuc {
+ display: none;
+ width: 250px;
+ height: 270px;
+ position: absolute;
+ z-index: 1;
+}
+
+.dropdown-menuc input {
+ width: 228px !important;
+ background-color: #FFFFFF !important;
+ height: 35px !important;
+ margin-top: 7px !important;
+ margin-left: 4%;
+ border-radius: 5px !important;
+ border: 2px solid #4447522f !important;
+ padding: 0.5rem !important;
+ margin-bottom: 7px !important;
+ box-sizing: border-box;
+}
+
+#dropdown-optionsc {
+ height: 209px;
+ width: 100%;
+ overflow-y: scroll;
+}
+
+#dropdown-optionsc li {
+ height: 30px;
+ width: 100%;
+ margin-bottom: 5px;
+}
+
+.headings {
+ background-color: #FFFFFF;
+ margin-top: 15vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ height: 460px;
+}
+
+.headings h1 {
+ margin-top: -90px;
+ font-family: Poppins;
+ color: #2A3855;
+ font-size: 40px;
+}
+
+.headings h4 {
+ margin-top: 20px;
+ font-family: Pacifico;
+ font-size: 23px;
+ color: #51526e;
+}
+
+
+/*mainpage search */
+
+.headings .seac .seacon {
+ margin-top: 40px;
+ background-color: #FFFFFF;
+ height: 12vh;
+ width: 1120px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-around;
+ border-radius: 10px;
+ box-shadow: 0px 1px 25px 1px rgba(0, 0, 0, 0.322);
+}
+
+.headings .seac .seacon input {
+ background-color: #FFFFFF;
+ height: 7vh;
+ outline: none;
+ border: 0px;
+ border-bottom: 2px solid #e1e4ec;
+ width: 284px;
+ color: #444752;
+
+}
+
+.headings .seac .seacon .dropdown-togglem {
+ background-color: #FFFFFF;
+ height: 7vh;
+ outline: none;
+ display: flex;
+ align-items: center;
+ justify-content: left;
+ justify-content: space-between;
+ border: 0px;
+ border-bottom: 2px solid #e1e4ec;
+ width: 274px;
+ color: #444752;
+
+}
+
+.headings .seac .seacon .dropdown-togglemm {
+ background-color: #FFFFFF;
+ height: 7vh;
+ outline: none;
+ display: flex;
+ align-items: center;
+ justify-content: left;
+ justify-content: space-between;
+ border: 0px;
+ border-bottom: 2px solid #e1e4ec;
+ width: 274px;
+ color: #444752;
+
+}
+
+.headings .seac .seacon .filtbtn {
+ width: 51px;
+ height: 50px;
+ background-color: #FFFFFF;
+ color: #51526e;
+ border: 1px solid #e1e4ec;
+ border-radius: 7px;
+}
+
+.headings .seac .seacon .searbtn {
+ width: 161px;
+ height: 50px;
+ background-color: #3049A1;
+ color: #FFFFFF;
+ border-radius: 7px;
+}
+
+.dropdownm {
+ position: relative;
+ display: inline-block;
+}
+
+.dropdown-menum {
+ display: none;
+ width: 340px;
+ height: 300px;
+ position: absolute;
+ z-index: 1;
+}
+
+.dropdown-menum input {
+ width: 310px !important;
+ background-color: #FFFFFF !important;
+ height: 35px !important;
+ margin-top: 7px !important;
+ margin-left: 4%;
+ border-radius: 5px !important;
+ border: 2px solid #4447522f !important;
+ padding: 0.5rem !important;
+ margin-bottom: 7px !important;
+ box-sizing: border-box;
+}
+
+#dropdown-optionsm {
+ height: 239px;
+ width: 100%;
+ overflow-y: scroll;
+}
+
+#dropdown-optionsm li {
+ height: 35px;
+ width: 100%;
+ margin-bottom: 10px;
+}
+
+
+
+.dropdownmm {
+ position: relative;
+ display: inline-block;
+}
+
+.dropdown-menumm {
+ display: none;
+ width: 250px;
+ height: 260px;
+ position: absolute;
+ z-index: 1;
+}
+
+.dropdown-menumm input {
+ width: 228px !important;
+ background-color: #FFFFFF !important;
+ height: 35px !important;
+ margin-top: 7px !important;
+ margin-left: 4%;
+ border-radius: 5px !important;
+ border: 2px solid #4447522f !important;
+ padding: 0.5rem !important;
+ margin-bottom: 7px !important;
+ box-sizing: border-box;
+}
+
+#dropdown-optionsmm {
+ height: 199px;
+ width: 100%;
+ overflow-y: scroll;
+}
+
+#dropdown-optionsmm li {
+ height: 30px;
+ width: 100%;
+ margin-bottom: 5px;
+}
+
+.footer {
+ width: 100%;
+ box-shadow: 0px 1px 10px 10px rgba(0, 0, 0, 0.08);
+ height: 20vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.footer .footerbtn {
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ height: 13vh;
+}
+
+.footer .footerbtn .fibtn {
+ width: 300px;
+ margin-left: 180px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100%;
+}
+
+.footer .footerbtn .downloadbtn {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 400px;
+ height: 100%;
+}
+
+.abt {
+ width: 100px;
+ height: 50px;
+ border: 0;
+
+ outline: none;
+ border-radius: 10px;
+ color: #3049A1;
+ background-color: #FFFFFF;
+ box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.692);
+}
+
+.dis {
+ width: 130px;
+ height: 50px;
+ border: 0;
+ outline: none;
+ color: #3049A1;
+ border-radius: 10px;
+ background-color: #FFFFFF;
+ box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.692);
+}
+
+.what {
+ width: 100px;
+ height: 50px;
+ border: 0;
+ outline: none;
+ border-radius: 10px;
+ color: #3049A1;
+ background-color: #FFFFFF;
+ box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.692);
+}
+
+.mess {
+ width: 130px;
+ height: 50px;
+ border: 0;
+ outline: none;
+ color: #3049A1;
+ border-radius: 10px;
+ background-color: #FFFFFF;
+ box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.692);
+}
+
+.dow {
+ width: 200px;
+ height: 50px;
+ border: 0;
+ outline: none;
+ color: #FFFFFF;
+ border-radius: 10px;
+ background-color: #3049A1;
+ box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.692);
+}
+
+.fa-download {
+ margin-right: 10px;
+}
+
+.fa-whatsapp {
+ margin-right: 10px;
+}
+
+.footer .footerbtn .fibbtn {
+
+ height: 100%;
+ width: 300px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.footer h2 {
+ color: #3049A1;
+ font-size: 18px;
+}
+
+.headings .fildrop {
+ overflow-y: scroll;
+ position: absolute;
+ width: 860px;
+ top: 410px;
+ margin-left: -540px;
+ border-radius: 10px;
+ box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+ height: 300px;
+}
+
+.fildrop {
+ z-index: 1;
+ display: none;
+ background-color: #FFFFFF;
+}
+
+.headings .fildrop .card-top {
+ width: 100%;
+ height: 9vh;
+ display: flex;
+ margin-bottom: 15px;
+ justify-content: space-between;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.headings .fildrop .card-top label {
+ margin-left: 40px;
+ margin-top: 5px;
+ color: #1a1b29;
+ font-size: 15px;
+ font-family: Roboto;
+}
+
+.headings .fildrop .card-top .checkcon {
+ display: flex;
+ align-items: center;
+ width: 400px;
+ height: 20px;
+ margin-top: 10px;
+}
+
+.headings .fildrop .card-top .holdcheck {
+ width: 140px;
+ margin-left: -60px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: left;
+ height: 20px;
+}
+
+.headings .fildrop .card-top .checkcon label {
+ color: #51526e;
+ margin-top: 0;
+ margin-left: 10;
+ font-size: 14px;
+}
+
+.headings .fildrop .card-top input {
+ width: 15px !important;
+ height: 15px !important;
+ border: 1px solid #51526e1c !important;
+ border-radius: 15px !important;
+ margin-left: 0;
+ outline: none !important;
+}
+
+
+.headings .fildrop .card-body {
+ width: 100%;
+ height: 80px;
+ display: flex;
+ justify-content: space-between;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.headings .fildrop .card-body label {
+ margin-left: 40px;
+ margin-top: 5px;
+ color: #1a1b29;
+ font-size: 15px;
+ font-family: Roboto;
+}
+
+.checkcon {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ width: 489px;
+ margin-left: 40px;
+ height: 20px;
+ margin-top: 10px;
+}
+
+.holdcheck {
+ width: 100px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+ height: 20px;
+}
+
+.headings .fildrop .card-body .checkcon label {
+ color: #51526e;
+ margin-top: 0;
+ margin-left: 0;
+ font-size: 14px;
+}
+
+.headings .fildrop .card-body input {
+ width: 15px !important;
+ height: 15px !important;
+ border: 1px solid #51526e1c !important;
+ border-radius: 15px !important;
+ margin-left: 0;
+ outline: none !important;
+
+}
+
+
+
+.headings .fildrop .card-body button {
+ width: 110px;
+ display: flex;
+ margin-top: 10px;
+ align-items: center;
+ justify-content: center;
+ justify-content: space-between;
+ margin-left: 25px;
+ font-size: 13px;
+ height: 4vh;
+ color: #7A82A6;
+}
+
+.headings .fildrop .card-footer {
+ width: 100%;
+ height: 8vh;
+ display: flex;
+ align-items: center;
+ justify-content: right;
+ border-top: 1px solid #4447522d;
+}
+
+.headings .fildrop .card-footer button {
+ width: 120px;
+ margin-right: 20px;
+ font-size: 13px;
+ height: 6vh;
+}
+
+#applyfil {
+ color: #FFFFFF;
+ background-color: #171f91;
+}
+
+
+/*responsiveness*/
+@media (min-width: 1201px) and (max-width: 1300px) {
+
+ .navbar {
+  width: 100%;
+ }
+
+ .navbar .logo {
+  height: 100%;
+  width: 200px;
+ }
+
+ .navbar .logo h1 {
+  font-size: 20.172px;
+ }
+
+ .navbar .tabs {
+  width: 499px;
+  margin-right: 250px;
+ }
+
+ .navbar .tabs ul {
+  height: 100%;
+  width: 100%;
+ }
+
+ .navbar .tabs ul li {
+  width: 90px;
+  height: 50px;
+ }
+
+ .navbar .tabs ul li a {
+  font-size: 15px;
+ }
+
+
+ .navbar .sidebuttons {
+  height: 100%;
+  width: 300px;
+ }
+
+ .navbar .sidebuttons .searchfa {
+  width: 30px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .userfa {
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+ }
+
+ .navbar .sidebuttons .plusfa {
+  width: 130px;
+  font-size: 13px;
+  height: 40px;
+ }
+
+ .fa-user {
+  margin-left: 8px;
+ }
+
+ .fa-plus {
+  margin-right: 10px;
+ }
+
+ .searchover .navbar .fa-times-circle {
+  font-size: 20px;
+ }
+
+
+ .searchover .navbar .seac {
+  width: 850px;
+  height: 15vh;
+ }
+
+ .searchover .navbar .seac .seacon {
+  background-color: #FFFFFF;
+  height: 10vh;
+  width: 700px;
+ }
+
+ .searchover .navbar .seac .seacon input {
+  height: 7vh;
+  width: 254px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-toggle {
+  height: 7vh;
+  width: 204px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-togglec {
+  height: 7vh;
+  width: 204px;
+
+ }
+
+ .searchover .navbar .seac .searbtn {
+  width: 121px;
+  height: 40px;
+ }
+
+
+ .dropdown-menu {
+  width: 240px;
+  height: 330px;
+ }
+
+ .dropdown-menu input {
+  width: 210px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menuc {
+  width: 150px;
+  height: 270px;
+ }
+
+ .dropdown-menuc input {
+  width: 128px !important;
+  height: 35px !important;
+ }
+
+
+ .footer {
+  width: 100%;
+  height: 20vh;
+ }
+
+ .footer .footerbtn {
+  width: 100%;
+  height: 13vh;
+ }
+
+ .footer .footerbtn .fibtn {
+  width: 300px;
+  margin-left: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+ }
+
+ .footer .footerbtn .downloadbtn {
+  width: 350px;
+  height: 100%;
+  margin-left: 60px;
+ }
+
+ .abt {
+  width: 120px;
+  height: 55px;
+ }
+
+ .dis {
+  width: 150px;
+  height: 55px;
+ }
+
+ .what {
+  width: 120px;
+  height: 55px;
+ }
+
+ .mess {
+  width: 150px;
+  height: 55px;
+ }
+
+ .dow {
+  width: 250px;
+  height: 55px;
+ }
+
+ .fa-download {
+  margin-right: 10px;
+ }
+
+ .fa-whatsapp {
+  margin-right: 10px;
+ }
+
+ .footer .footerbtn .fibbtn {
+  height: 100%;
+  margin-left: 60px;
+  width: 300px;
+ }
+
+ .footer h2 {
+  color: #3049A1;
+  font-size: 15px;
+ }
+
+
+ .headings {
+  background-color: #FFFFFF;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 460px;
+ }
+
+ .headings h1 {
+  margin-top: -90px;
+  font-family: Poppins;
+  color: #2A3855;
+  font-size: 38px;
+ }
+
+ .headings h4 {
+  margin-top: 20px;
+  font-family: Pacifico;
+  font-size: 20px;
+  color: #51526e;
+ }
+
+
+ /*mainpage search */
+
+ .headings .seac .seacon {
+  margin-top: 40px;
+  height: 12vh;
+  width: 950px;
+ }
+
+ .headings .seac .seacon input {
+  background-color: #FFFFFF;
+  height: 7vh;
+  width: 264px;
+  color: #444752;
+
+ }
+
+ .headings .seac .seacon .dropdown-togglem {
+  height: 7vh;
+  width: 184px;
+ }
+
+ .headings .seac .seacon .dropdown-togglemm {
+  height: 7vh;
+  width: 184px;
+ }
+
+ .headings .seac .seacon .filtbtn {
+  width: 41px;
+  height: 40px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .headings .seac .seacon .searbtn {
+  width: 141px;
+  font-size: 13px;
+  height: 45px;
+ }
+
+ .dropdown-menum {
+  width: 240px;
+  height: 300px;
+ }
+
+ .dropdown-menum input {
+  width: 210px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menumm {
+  width: 150px;
+  height: 260px;
+ }
+
+ .dropdown-menumm input {
+  width: 128px !important;
+  height: 35px !important;
+ }
+
+
+ .headings .fildrop {
+  width: 660px;
+  top: 410px;
+  margin-left: -440px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+  height: 300px;
+ }
+
+ .fildrop {
+  z-index: 1;
+  display: none;
+  background-color: #FFFFFF;
+ }
+
+ .headings .fildrop .card-top {
+  width: 100%;
+  height: 9vh;
+ }
+
+ .headings .fildrop .card-top label {
+  margin-left: 40px;
+  margin-top: 5px;
+  font-size: 15px;
+ }
+
+ .headings .fildrop .card-top .checkcon {
+  width: 400px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .headings .fildrop .card-top .holdcheck {
+  width: 140px;
+  margin-left: -60px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-top .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-top input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+ .headings .fildrop .card-body {
+  width: 100%;
+  height: 80px;
+ }
+
+ .headings .fildrop .card-body label {
+  margin-left: 40px;
+  margin-top: 5px;
+  color: #1a1b29;
+  font-size: 15px;
+  font-family: Roboto;
+ }
+
+ .checkcon {
+  width: 489px;
+  margin-left: 40px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .holdcheck {
+  width: 100px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-body .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-body input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+
+ .headings .fildrop .card-body button {
+  width: 110px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 13px;
+  height: 4vh;
+  color: #7A82A6;
+ }
+
+ .headings .fildrop .card-footer {
+  width: 100%;
+  height: 8vh;
+ }
+
+ .headings .fildrop .card-footer button {
+  width: 120px;
+  margin-right: 20px;
+  font-size: 13px;
+  height: 6vh;
+ }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+
+ .navbar {
+  width: 100%;
+ }
+
+ .navbar .logo {
+  height: 100%;
+  width: 100px;
+ }
+
+ .navbar .logo h1 {
+  font-size: 23.172px;
+ }
+
+ .navbar .tabs {
+  width: 439px;
+  margin-right: 200px;
+ }
+
+ .navbar .tabs ul {
+  height: 100%;
+  width: 100%;
+ }
+
+ .navbar .tabs ul li {
+  width: 80px;
+  height: 40px;
+ }
+
+ .navbar .tabs ul li a {
+  font-size: 14px;
+ }
+
+
+ .navbar .sidebuttons {
+  height: 100%;
+  width: 250px;
+ }
+
+ .navbar .sidebuttons .searchfa {
+  width: 30px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .userfa {
+  width: 90px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .plusfa {
+  width: 100px;
+  font-size: 10px;
+  height: 35px;
+ }
+
+ .fa-user {
+  margin-left: 8px;
+ }
+
+ .fa-plus {
+  margin-right: 10px;
+ }
+
+ .searchover .navbar .fa-times-circle {
+  font-size: 20px;
+ }
+
+
+ .searchover .navbar .seac {
+  width: 650px;
+  height: 15vh;
+ }
+
+ .searchover .navbar .seac .seacon {
+  background-color: #FFFFFF;
+  height: 10vh;
+  width: 500px;
+ }
+
+ .searchover .navbar .seac .seacon input {
+  height: 7vh;
+  width: 154px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-toggle {
+  height: 7vh;
+  width: 144px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-togglec {
+  height: 7vh;
+  width: 144px;
+
+ }
+
+ .searchover .navbar .seac .searbtn {
+  width: 91px;
+  height: 35px;
+ }
+
+
+ .dropdown-menu {
+  width: 240px;
+  height: 330px;
+ }
+
+ .dropdown-menu input {
+  width: 210px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menuc {
+  width: 150px;
+  height: 270px;
+ }
+
+ .dropdown-menuc input {
+  width: 128px !important;
+  height: 35px !important;
+ }
+
+
+ .footer {
+  width: 100%;
+  height: 20vh;
+ }
+
+ .footer .footerbtn {
+  width: 100%;
+  height: 13vh;
+ }
+
+ .footer .footerbtn .fibtn {
+  width: 250px;
+  margin-left: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+ }
+
+ .footer .footerbtn .downloadbtn {
+  width: 290px;
+  height: 100%;
+  margin-left: 60px;
+ }
+
+ .abt {
+  width: 100px;
+  height: 40px;
+ }
+
+ .dis {
+  width: 120px;
+  height: 40px;
+ }
+
+ .what {
+  width: 100px;
+  height: 40px;
+ }
+
+ .mess {
+  width: 120px;
+  height: 40px;
+ }
+
+ .dow {
+  width: 200px;
+  height: 40px;
+ }
+
+ .fa-download {
+  margin-right: 10px;
+ }
+
+ .fa-whatsapp {
+  margin-right: 10px;
+ }
+
+ .footer .footerbtn .fibbtn {
+  height: 100%;
+  margin-left: 60px;
+  width: 250px;
+ }
+
+ .footer h2 {
+  color: #3049A1;
+  font-size: 15px;
+ }
+
+
+ .headings {
+  background-color: #FFFFFF;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 460px;
+ }
+
+ .headings h1 {
+  margin-top: -90px;
+  font-family: Poppins;
+  color: #2A3855;
+  font-size: 35px;
+ }
+
+ .headings h4 {
+  margin-top: 20px;
+  font-family: Pacifico;
+  font-size: 18px;
+  color: #51526e;
+ }
+
+
+ /*mainpage search */
+
+ .headings .seac .seacon {
+  margin-top: 40px;
+  height: 12vh;
+  width: 750px;
+ }
+
+ .headings .seac .seacon input {
+  background-color: #FFFFFF;
+  height: 7vh;
+  width: 164px;
+  color: #444752;
+
+ }
+
+ .headings .seac .seacon .dropdown-togglem {
+  height: 7vh;
+  width: 154px;
+ }
+
+ .headings .seac .seacon .dropdown-togglemm {
+  height: 7vh;
+  width: 154px;
+ }
+
+ .headings .seac .seacon .filtbtn {
+  width: 31px;
+  height: 30px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .headings .seac .seacon .searbtn {
+  width: 121px;
+  font-size: 13px;
+  height: 35px;
+ }
+
+ .dropdown-menum {
+  width: 240px;
+  height: 300px;
+ }
+
+ .dropdown-menum input {
+  width: 210px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menumm {
+  width: 150px;
+  height: 260px;
+ }
+
+ .dropdown-menumm input {
+  width: 128px !important;
+  height: 35px !important;
+ }
+
+
+ .headings .fildrop {
+  width: 660px;
+  top: 410px;
+  margin-left: -440px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+  height: 300px;
+ }
+
+ .fildrop {
+  z-index: 1;
+  display: none;
+  background-color: #FFFFFF;
+ }
+
+ .headings .fildrop .card-top {
+  width: 100%;
+  height: 9vh;
+ }
+
+ .headings .fildrop .card-top label {
+  margin-left: 40px;
+  margin-top: 5px;
+  font-size: 15px;
+ }
+
+ .headings .fildrop .card-top .checkcon {
+  width: 400px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .headings .fildrop .card-top .holdcheck {
+  width: 140px;
+  margin-left: -60px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-top .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-top input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+ .headings .fildrop .card-body {
+  width: 100%;
+  height: 80px;
+ }
+
+ .headings .fildrop .card-body label {
+  margin-left: 40px;
+  margin-top: 5px;
+  color: #1a1b29;
+  font-size: 15px;
+  font-family: Roboto;
+ }
+
+ .checkcon {
+  width: 489px;
+  margin-left: 40px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .holdcheck {
+  width: 100px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-body .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-body input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+
+ .headings .fildrop .card-body button {
+  width: 110px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 13px;
+  height: 4vh;
+  color: #7A82A6;
+ }
+
+ .headings .fildrop .card-footer {
+  width: 100%;
+  height: 8vh;
+ }
+
+ .headings .fildrop .card-footer button {
+  width: 120px;
+  margin-right: 20px;
+  font-size: 13px;
+  height: 6vh;
+ }
+}
+
+@media (min-width: 200px) and (max-width: 999px) {
+
+ .navbar .tabs {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  width: 209px !important;
+  margin-right: 130px;
+ }
+
+ .navbar .tabs button {
+  font-size: 15px;
+  color: #2a3;
+  width: 35px;
+  height: 35px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #7A82A6;
+ }
+
+ .navbar .tabs .tabsmain {
+  display: none;
+ }
+
+ .tabdrop {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #ffffff;
+  width: 280px;
+  height: 100%;
+  z-index: 16;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: 0.3s linear;
+  transform: translateX(-100%);
+ }
+
+ .tabdrop .tabsmain {
+  margin-top: 70px;
+  width: 100%;
+  height: 250px;
+  list-style-type: none;
+  display: flex;
+  text-decoration: none;
+  align-items: left;
+  flex-direction: column;
+  font-family: Roboto;
+  justify-content: space-between;
+ }
+
+ .tabdrop ul li a {
+  color: #2A3855;
+  font-size: 15px;
+ }
+
+ .tabdrop ul li a:hover {
+  color: #3049A1;
+ }
+
+ .tabdrop ul li .active {
+  color: #3049A1;
+ }
+
+ .close {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  height: 30px;
+ }
+
+ .tabdrop .fa-times-circle:hover {
+  rotate: 190deg;
+  transition: 0.3s linear;
+ }
+
+}
+
+@media (min-width: 900px) and (max-width: 999px) {
+
+ .navbar {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .navbar .logo {
+
+  justify-content: right !important;
+  height: 100%;
+  width: 200px;
+ }
+
+ .navbar .logo h1 {
+  font-size: 27.172px;
+ }
+
+ .navbar .tabs {
+  width: 279px;
+  margin-right: 200px;
+ }
+
+
+ .navbar .sidebuttons {
+  height: 100%;
+  width: 250px;
+ }
+
+ .navbar .sidebuttons .searchfa {
+  width: 30px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .userfa {
+  width: 90px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .plusfa {
+  width: 100px;
+  font-size: 10px;
+  height: 35px;
+ }
+
+ .fa-user {
+  margin-left: 8px;
+ }
+
+ .fa-plus {
+  margin-right: 10px;
+ }
+
+ .searchover .navbar .fa-times-circle {
+  font-size: 20px;
+ }
+
+ .searchover .navbar {
+  height: 15vh;
+ }
+
+ .searchover .navbar .seac {
+  width: 650px;
+  height: 10vh;
+ }
+
+ .searchover .navbar .seac .seacon {
+  background-color: #FFFFFF;
+  height: 6vh;
+  width: 500px;
+ }
+
+ .searchover .navbar .seac .seacon input {
+  height: 5vh;
+  font-size: 13px;
+  width: 154px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-toggle {
+  height: 5vh;
+  font-size: 13px;
+  width: 144px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-togglec {
+  height: 5vh;
+  font-size: 13px;
+  width: 144px;
+
+ }
+
+ .searchover .navbar .seac .searbtn {
+  width: 121px;
+  height: 45px;
+ }
+
+
+ .dropdown-menu {
+  width: 240px;
+  height: 330px;
+ }
+
+ .dropdown-menu input {
+  width: 210px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menuc {
+  width: 150px;
+  height: 270px;
+ }
+
+ .dropdown-menuc input {
+  width: 128px !important;
+  height: 35px !important;
+ }
+
+
+ .footer {
+  width: 100%;
+  height: 12vh;
+ }
+
+ .footer .footerbtn {
+  width: 100%;
+  height: 8vh;
+ }
+
+ .footer .footerbtn .fibtn {
+  width: 270px;
+  margin-left: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+ }
+
+ .footer .footerbtn .downloadbtn {
+  width: 200px;
+  height: 100%;
+  margin-left: 60px;
+ }
+
+ .abt {
+  width: 110px;
+  height: 50px;
+ }
+
+ .dis {
+  width: 140px;
+  height: 50px;
+ }
+
+ .what {
+  width: 110px;
+  height: 50px;
+ }
+
+ .mess {
+  width: 140px;
+  height: 50px;
+ }
+
+ .dow {
+  width: 200px;
+  height: 50px;
+ }
+
+ .fa-download {
+  margin-right: 10px;
+ }
+
+ .fa-whatsapp {
+  margin-right: 10px;
+ }
+
+ .footer .footerbtn .fibbtn {
+  height: 100%;
+  margin-left: 60px;
+  width: 270px;
+ }
+
+ .footer h2 {
+  color: #3049A1;
+  font-size: 15px;
+ }
+
+
+ .headings {
+  background-color: #FFFFFF;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 990px;
+ }
+
+ .headings h1 {
+  margin-top: -90px;
+  font-family: Poppins;
+  color: #2A3855;
+  font-size: 40px;
+ }
+
+ .headings h4 {
+  margin-top: 20px;
+  font-family: Pacifico;
+  font-size: 20px;
+  color: #51526e;
+ }
+
+
+ /*mainpage search */
+
+ .headings .seac .seacon {
+  margin-top: 40px;
+  height: 10vh;
+  width: 850px;
+ }
+
+ .headings .seac .seacon input {
+  background-color: #FFFFFF;
+  height: 7vh;
+  width: 184px;
+  color: #444752;
+
+ }
+
+ .headings .seac .seacon .dropdown-togglem {
+  height: 7vh;
+  width: 184px;
+ }
+
+ .headings .seac .seacon .dropdown-togglemm {
+  height: 7vh;
+  width: 184px;
+ }
+
+ .headings .seac .seacon .filtbtn {
+  width: 41px;
+  height: 40px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .headings .seac .seacon .searbtn {
+  width: 141px;
+  font-size: 13px;
+  height: 45px;
+ }
+
+ .dropdown-menum {
+  width: 240px;
+  height: 300px;
+ }
+
+ .dropdown-menum input {
+  width: 220px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menumm {
+  width: 150px;
+  height: 260px;
+ }
+
+ .dropdown-menumm input {
+  width: 148px !important;
+  height: 35px !important;
+ }
+
+
+ .headings .fildrop {
+  width: 660px;
+  top: 800px;
+  margin-left: -410px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+  height: 300px;
+ }
+
+ .fildrop {
+  z-index: 1;
+  display: none;
+  background-color: #FFFFFF;
+ }
+
+ .headings .fildrop .card-top {
+  width: 100%;
+  height: 4vh;
+ }
+
+ .headings .fildrop .card-top label {
+  margin-left: 40px;
+  margin-top: 5px;
+  font-size: 15px;
+ }
+
+ .headings .fildrop .card-top .checkcon {
+  width: 400px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .headings .fildrop .card-top .holdcheck {
+  width: 140px;
+  margin-left: -60px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-top .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-top input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+ .headings .fildrop .card-body {
+  width: 100%;
+  height: 80px;
+ }
+
+ .headings .fildrop .card-body label {
+  margin-left: 40px;
+  margin-top: 5px;
+  color: #1a1b29;
+  font-size: 15px;
+  font-family: Roboto;
+ }
+
+ .checkcon {
+  width: 489px;
+  margin-left: 40px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .holdcheck {
+  width: 100px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-body .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-body input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+
+ .headings .fildrop .card-body button {
+  width: 110px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 13px;
+  height: 4vh;
+  color: #7A82A6;
+ }
+
+ .headings .fildrop .card-footer {
+  width: 100%;
+  height: 8vh;
+ }
+
+ .headings .fildrop .card-footer button {
+  width: 120px;
+  margin-right: 20px;
+  font-size: 13px;
+  height: 6vh;
+ }
+}
+
+@media (min-width: 800px) and (max-width: 899px) {
+
+ .navbar {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .navbar .logo {
+
+  justify-content: right !important;
+  height: 100%;
+  width: 200px;
+ }
+
+ .navbar .logo h1 {
+  font-size: 27.172px;
+ }
+
+ .navbar .tabs {
+  width: 279px;
+  margin-right: 140px;
+ }
+
+
+ .navbar .sidebuttons {
+  height: 100%;
+  width: 250px;
+ }
+
+ .navbar .sidebuttons .searchfa {
+  width: 30px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .userfa {
+  width: 90px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .plusfa {
+  width: 100px;
+  font-size: 10px;
+  height: 35px;
+ }
+
+ .fa-user {
+  margin-left: 8px;
+ }
+
+ .fa-plus {
+  margin-right: 10px;
+ }
+
+ .searchover .navbar .fa-times-circle {
+  font-size: 20px;
+ }
+
+ .searchover .navbar {
+  height: 15vh;
+ }
+
+ .searchover .navbar .seac {
+  width: 650px;
+  height: 10vh;
+ }
+
+ .searchover .navbar .seac .seacon {
+  background-color: #FFFFFF;
+  height: 6vh;
+  width: 500px;
+ }
+
+ .searchover .navbar .seac .seacon input {
+  height: 5vh;
+  font-size: 13px;
+  width: 154px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-toggle {
+  height: 5vh;
+  font-size: 13px;
+  width: 144px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-togglec {
+  height: 5vh;
+  font-size: 13px;
+  width: 144px;
+
+ }
+
+ .searchover .navbar .seac .searbtn {
+  width: 121px;
+  height: 45px;
+ }
+
+
+ .dropdown-menu {
+  width: 240px;
+  height: 330px;
+ }
+
+ .dropdown-menu input {
+  width: 210px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menuc {
+  width: 150px;
+  height: 270px;
+ }
+
+ .dropdown-menuc input {
+  width: 128px !important;
+  height: 35px !important;
+ }
+
+
+ .footer {
+  width: 100%;
+  height: 12vh;
+ }
+
+ .footer .footerbtn {
+  width: 100%;
+  height: 8vh;
+ }
+
+ .footer .footerbtn .fibtn {
+  width: 220px;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+ }
+
+ .footer .footerbtn .downloadbtn {
+  width: 200px;
+  height: 100%;
+  margin-left: 60px;
+ }
+
+ .abt {
+  width: 80px;
+  height: 50px;
+ }
+
+ .dis {
+  width: 120px;
+  height: 50px;
+ }
+
+ .what {
+  width: 80px;
+  height: 50px;
+ }
+
+ .mess {
+  width: 120px;
+  height: 50px;
+ }
+
+ .dow {
+  width: 200px;
+  height: 50px;
+ }
+
+ .fa-download {
+  margin-right: 10px;
+ }
+
+ .fa-whatsapp {
+  margin-right: 10px;
+ }
+
+ .footer .footerbtn .fibbtn {
+  height: 100%;
+  margin-left: 60px;
+  width: 220px;
+ }
+
+ .footer h2 {
+  color: #3049A1;
+  font-size: 15px;
+ }
+
+
+ .headings {
+  background-color: #FFFFFF;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 990px;
+ }
+
+ .headings h1 {
+  margin-top: -90px;
+  font-family: Poppins;
+  color: #2A3855;
+  font-size: 40px;
+ }
+
+ .headings h4 {
+  margin-top: 20px;
+  font-family: Pacifico;
+  font-size: 20px;
+  color: #51526e;
+ }
+
+
+ /*mainpage search */
+
+ .headings .seac .seacon {
+  margin-top: 40px;
+  height: 10vh;
+  width: 750px;
+ }
+
+ .headings .seac .seacon input {
+  background-color: #FFFFFF;
+  height: 5vh;
+  width: 164px;
+  font-size: 12px;
+  color: #444752;
+
+ }
+
+ .headings .seac .seacon .dropdown-togglem {
+  height: 5vh;
+  font-size: 12px;
+  width: 164px;
+ }
+
+ .headings .seac .seacon .dropdown-togglemm {
+  height: 5vh;
+  width: 164px;
+  font-size: 12px;
+ }
+
+ .headings .seac .seacon .filtbtn {
+  width: 41px;
+  height: 40px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .headings .seac .seacon .searbtn {
+  width: 141px;
+  font-size: 13px;
+  height: 45px;
+ }
+
+ .dropdown-menum {
+  width: 240px;
+  height: 300px;
+ }
+
+ .dropdown-menum input {
+  width: 220px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menumm {
+  width: 150px;
+  height: 260px;
+ }
+
+ .dropdown-menumm input {
+  width: 148px !important;
+  height: 35px !important;
+ }
+
+
+ .headings .fildrop {
+  width: 660px;
+  top: 770px;
+  margin-left: -360px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+  height: 300px;
+ }
+
+ .fildrop {
+  z-index: 1;
+  display: none;
+  background-color: #FFFFFF;
+ }
+
+ .headings .fildrop .card-top {
+  width: 100%;
+  height: 4vh;
+ }
+
+ .headings .fildrop .card-top label {
+  margin-left: 40px;
+  margin-top: 5px;
+  font-size: 15px;
+ }
+
+ .headings .fildrop .card-top .checkcon {
+  width: 400px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .headings .fildrop .card-top .holdcheck {
+  width: 140px;
+  margin-left: -60px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-top .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-top input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+ .headings .fildrop .card-body {
+  width: 100%;
+  height: 90px;
+ }
+
+ .headings .fildrop .card-body label {
+  margin-left: 40px;
+  margin-top: 5px;
+  color: #1a1b29;
+  font-size: 15px;
+  font-family: Roboto;
+ }
+
+ .checkcon {
+  width: 489px;
+  margin-left: 40px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .holdcheck {
+  width: 100px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-body .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-body input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+
+ .headings .fildrop .card-body button {
+  width: 110px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 13px;
+  height: 4vh;
+  color: #7A82A6;
+ }
+
+ .headings .fildrop .card-footer {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .headings .fildrop .card-footer button {
+  width: 120px;
+  margin-right: 20px;
+  font-size: 13px;
+  height: 4vh;
+ }
+}
+
+@media (min-width: 700px) and (max-width: 799px) {
+
+ .navbar {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .navbar .logo {
+
+  justify-content: right !important;
+  height: 100%;
+  width: 150px;
+ }
+
+ .navbar .logo h1 {
+  font-size: 27.172px;
+ }
+
+ .navbar .tabs {
+  width: 270px;
+  margin-right: 90px;
+ }
+
+
+ .navbar .sidebuttons {
+  height: 100%;
+  width: 250px;
+ }
+
+ .navbar .sidebuttons .searchfa {
+  width: 30px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .userfa {
+  width: 90px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .plusfa {
+  width: 100px;
+  font-size: 10px;
+  height: 35px;
+ }
+
+ .fa-user {
+  margin-left: 8px;
+ }
+
+ .fa-plus {
+  margin-right: 10px;
+ }
+
+ .searchover .navbar .fa-times-circle {
+  font-size: 20px;
+ }
+
+ .searchover .navbar {
+  height: 15vh;
+ }
+
+ .searchover .navbar .seac {
+  width: 650px;
+  height: 10vh;
+ }
+
+ .searchover .navbar .seac .seacon {
+  background-color: #FFFFFF;
+  height: 6vh;
+  width: 500px;
+ }
+
+ .searchover .navbar .seac .seacon input {
+  height: 5vh;
+  font-size: 11px;
+  width: 154px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-toggle {
+  height: 5vh;
+  font-size: 11px;
+  width: 144px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-togglec {
+  height: 5vh;
+  font-size: 13px;
+  width: 144px;
+
+ }
+
+ .searchover .navbar .seac .searbtn {
+  width: 121px;
+  height: 45px;
+ }
+
+
+ .dropdown-menu {
+  width: 240px;
+  height: 330px;
+ }
+
+ .dropdown-menu input {
+  width: 210px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menuc {
+  width: 150px;
+  height: 270px;
+ }
+
+ .dropdown-menuc input {
+  width: 128px !important;
+  height: 35px !important;
+ }
+
+
+ .footer {
+  width: 100%;
+  height: 12vh;
+ }
+
+ .footer .footerbtn {
+  width: 100%;
+  height: 8vh;
+ }
+
+ .footer .footerbtn .fibtn {
+  width: 200px;
+  margin-left: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+ }
+
+ .footer .footerbtn .downloadbtn {
+  width: 180px;
+  height: 100%;
+  margin-left: 40px;
+ }
+
+ .abt {
+  width: 70px;
+  height: 40px;
+ }
+
+ .dis {
+  width: 100px;
+  height: 40px;
+ }
+
+ .what {
+  width: 80px;
+  height: 40px;
+ }
+
+ .mess {
+  width: 100px;
+  height: 40px;
+ }
+
+ .dow {
+  width: 200px;
+  height: 40px;
+ }
+
+ .fa-download {
+  margin-right: 10px;
+ }
+
+ .fa-whatsapp {
+  margin-right: 10px;
+ }
+
+ .footer .footerbtn .fibbtn {
+  height: 100%;
+  margin-left: 50px;
+  width: 200px;
+ }
+
+ .footer h2 {
+  color: #3049A1;
+  font-size: 15px;
+ }
+
+
+ .headings {
+  background-color: #FFFFFF;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 990px;
+ }
+
+ .headings h1 {
+  margin-top: -90px;
+  font-family: Poppins;
+  color: #2A3855;
+  font-size: 40px;
+ }
+
+ .headings h4 {
+  margin-top: 20px;
+  font-family: Pacifico;
+  font-size: 20px;
+  color: #51526e;
+ }
+
+
+ /*mainpage search */
+
+ .headings .seac .seacon {
+  margin-top: 40px;
+  height: 8vh;
+  width: 650px;
+ }
+
+ .headings .seac .seacon input {
+  background-color: #FFFFFF;
+  height: 5vh;
+  width: 134px;
+  font-size: 11px;
+  color: #444752;
+
+ }
+
+ .headings .seac .seacon .dropdown-togglem {
+  height: 5vh;
+  font-size: 11px;
+  width: 134px;
+ }
+
+ .headings .seac .seacon .dropdown-togglemm {
+  height: 5vh;
+  width: 134px;
+  font-size: 11px;
+ }
+
+ .headings .seac .seacon .filtbtn {
+  width: 31px;
+  height: 30px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .headings .seac .seacon .searbtn {
+  width: 121px;
+  font-size: 13px;
+  height: 45px;
+ }
+
+ .dropdown-menum {
+  width: 240px;
+  height: 300px;
+ }
+
+ .dropdown-menum input {
+  width: 220px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menumm {
+  width: 150px;
+  height: 260px;
+ }
+
+ .dropdown-menumm input {
+  width: 148px !important;
+  height: 35px !important;
+ }
+
+
+ .headings .fildrop {
+  width: 600px;
+  top: 750px;
+  margin-left: -310px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+  height: 300px;
+ }
+
+ .fildrop {
+  z-index: 1;
+  display: none;
+  background-color: #FFFFFF;
+ }
+
+ .headings .fildrop .card-top {
+  width: 100%;
+  height: 4vh;
+ }
+
+ .headings .fildrop .card-top label {
+  margin-left: 40px;
+  margin-top: 5px;
+  font-size: 15px;
+ }
+
+ .headings .fildrop .card-top .checkcon {
+  width: 400px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .headings .fildrop .card-top .holdcheck {
+  width: 140px;
+  margin-left: -60px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-top .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-top input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+ .headings .fildrop .card-body {
+  width: 100%;
+  height: 90px;
+ }
+
+ .headings .fildrop .card-body label {
+  margin-left: 40px;
+  margin-top: 5px;
+  color: #1a1b29;
+  font-size: 15px;
+  font-family: Roboto;
+ }
+
+ .checkcon {
+  width: 489px;
+  margin-left: 40px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .holdcheck {
+  width: 100px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-body .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-body input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+
+ .headings .fildrop .card-body button {
+  width: 110px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 13px;
+  height: 4vh;
+  color: #7A82A6;
+ }
+
+ .headings .fildrop .card-footer {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .headings .fildrop .card-footer button {
+  width: 120px;
+  margin-right: 20px;
+  font-size: 13px;
+  height: 4vh;
+ }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+
+ .navbar {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .navbar .logo {
+  justify-content: right !important;
+  height: 100%;
+  width: 150px;
+ }
+
+ .navbar .logo h1 {
+  font-size: 27.172px;
+ }
+
+ .navbar .tabs {
+  width: 100px !important;
+  margin-right: 90px;
+ }
+
+ .navbar .sidebuttons {
+  height: 100%;
+  width: 250px;
+ }
+
+ .navbar .sidebuttons .searchfa {
+  width: 30px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .userfa {
+  width: 90px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .plusfa {
+  width: 100px;
+  font-size: 10px;
+  height: 35px;
+ }
+
+ .fa-user {
+  margin-left: 8px;
+ }
+
+ .fa-plus {
+  margin-right: 10px;
+ }
+
+ .searchover .navbar .fa-times-circle {
+  font-size: 20px;
+ }
+
+ .searchover .navbar {
+  height: 15vh;
+ }
+
+ .searchover .navbar .seac {
+  width: 550px;
+  height: 10vh;
+ }
+
+ .searchover .navbar .seac .seacon {
+  background-color: #FFFFFF;
+  height: 5vh;
+  width: 450px;
+ }
+
+ .searchover .navbar .seac .seacon input {
+  height: 3vh;
+  font-size: 11px;
+  width: 134px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-toggle {
+  height: 3vh;
+  font-size: 11px;
+  width: 124px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-togglec {
+  height: 3vh;
+  font-size: 13px;
+  width: 124px;
+
+ }
+
+ .searchover .navbar .seac .searbtn {
+  width: 91px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+
+ .dropdown-menu {
+  width: 240px;
+  height: 330px;
+ }
+
+ .dropdown-menu input {
+  width: 210px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menuc {
+  width: 150px;
+  height: 270px;
+ }
+
+ .dropdown-menuc input {
+  width: 128px !important;
+  height: 35px !important;
+ }
+
+
+ .footer {
+  width: 100%;
+  height: 12vh;
+ }
+
+ .footer .footerbtn {
+  width: 100%;
+  height: 8vh;
+ }
+
+ .footer .footerbtn .fibtn {
+  width: 210px;
+  margin-left: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+ }
+
+ .footer .footerbtn .downloadbtn {
+  width: 180px;
+  height: 100%;
+  margin-left: 10px;
+ }
+
+ .abt {
+  width: 80px;
+  height: 40px;
+ }
+
+ .dis {
+  width: 100px;
+  height: 40px;
+ }
+
+ .what {
+  width: 80px;
+  height: 40px;
+ }
+
+ .mess {
+  width: 100px;
+  height: 40px;
+ }
+
+ .dow {
+  width: 200px;
+  height: 40px;
+ }
+
+ .fa-download {
+  margin-right: 10px;
+ }
+
+ .fa-whatsapp {
+  margin-right: 10px;
+ }
+
+ .footer .footerbtn .fibbtn {
+  height: 100%;
+  margin-left: 10px;
+  width: 210px;
+ }
+
+ .footer h2 {
+  color: #3049A1;
+  font-size: 15px;
+ }
+
+
+ .headings {
+  background-color: #FFFFFF;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 990px;
+ }
+
+ .headings h1 {
+  margin-top: -90px;
+  font-family: Poppins;
+  color: #2A3855;
+  font-size: 30px;
+ }
+
+ .headings h4 {
+  margin-top: 20px;
+  font-family: Pacifico;
+  font-size: 17px;
+  color: #51526e;
+ }
+
+
+ /*mainpage search */
+
+ .headings .seac .seacon {
+  margin-top: 40px;
+  height: 8vh;
+  width: 550px;
+ }
+
+ .headings .seac .seacon input {
+  background-color: #FFFFFF;
+  height: 5vh;
+  width: 134px;
+  font-size: 11px;
+  color: #444752;
+
+ }
+
+ .headings .seac .seacon .dropdown-togglem {
+  height: 5vh;
+  font-size: 11px;
+  width: 124px;
+ }
+
+ .headings .seac .seacon .dropdown-togglemm {
+  height: 5vh;
+  width: 124px;
+  font-size: 11px;
+ }
+
+ .headings .seac .seacon .filtbtn {
+  width: 25px;
+  height: 28px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .headings .seac .seacon .searbtn {
+  width: 101px;
+  font-size: 10px;
+  height: 40px;
+ }
+
+ .dropdown-menum {
+  width: 200px;
+  height: 300px;
+ }
+
+ .dropdown-menum input {
+  width: 180px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menumm {
+  width: 100px;
+  height: 260px;
+ }
+
+ .dropdown-menumm input {
+  width: 145px !important;
+  height: 35px !important;
+ }
+
+
+ .headings .fildrop {
+  width: 550px;
+  top: 730px;
+  margin-left: -265px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+  height: 300px;
+ }
+
+ .fildrop {
+  z-index: 1;
+  display: none;
+  background-color: #FFFFFF;
+ }
+
+ .headings .fildrop .card-top {
+  width: 100%;
+  height: 4vh;
+ }
+
+ .headings .fildrop .card-top label {
+  margin-left: 40px;
+  margin-top: 5px;
+  font-size: 15px;
+ }
+
+ .headings .fildrop .card-top .checkcon {
+  width: 400px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .headings .fildrop .card-top .holdcheck {
+  width: 140px;
+  margin-left: -60px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-top .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-top input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+ .headings .fildrop .card-body {
+  width: 100%;
+  height: 90px;
+ }
+
+ .headings .fildrop .card-body label {
+  margin-left: 40px;
+  margin-top: 5px;
+  color: #1a1b29;
+  font-size: 15px;
+  font-family: Roboto;
+ }
+
+ .checkcon {
+  width: 489px;
+  margin-left: 40px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .holdcheck {
+  width: 100px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-body .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-body input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+
+ .headings .fildrop .card-body button {
+  width: 110px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 13px;
+  height: 4vh;
+  color: #7A82A6;
+ }
+
+ .headings .fildrop .card-footer {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .headings .fildrop .card-footer button {
+  width: 120px;
+  margin-right: 20px;
+  font-size: 13px;
+  height: 4vh;
+ }
+}
+
+@media (min-width: 500px) and (max-width: 599px) {
+
+ .navbar {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .navbar .logo {
+  justify-content: right !important;
+  height: 100%;
+  width: 100px;
+ }
+
+ .navbar .logo h1 {
+  font-size: 21.172px;
+ }
+
+ .navbar .tabs {
+  width: 100px !important;
+  margin-right: 60px;
+ }
+
+ .navbar .tabs button {
+  width: 20px;
+  margin-left: 20px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 10px;
+ }
+
+ .navbar .sidebuttons {
+  height: 100%;
+  width: 250px;
+ }
+
+ .navbar .sidebuttons .searchfa {
+  width: 30px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .userfa {
+  width: 90px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .plusfa {
+  width: 100px;
+  font-size: 10px;
+  height: 35px;
+ }
+
+ .fa-user {
+  margin-left: 8px;
+ }
+
+ .fa-plus {
+  margin-right: 10px;
+ }
+
+ .searchover .navbar .fa-times-circle {
+  font-size: 15px;
+ }
+
+ .searchover .navbar {
+  height: 15vh;
+ }
+
+ .searchover .navbar .seac {
+  width: 450px;
+  height: 10vh;
+ }
+
+ .searchover .navbar .seac .seacon {
+  background-color: #FFFFFF;
+  height: 6vh;
+  width: 350px;
+ }
+
+ .searchover .navbar .seac .seacon input {
+  height: 3vh;
+  font-size: 11px;
+  width: 114px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-toggle {
+  height: 3vh;
+  font-size: 11px;
+  width: 99px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-togglec {
+  height: 3vh;
+  font-size: 13px;
+  width: 99px;
+
+ }
+
+ .searchover .navbar .seac .searbtn {
+  width: 91px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+
+ .dropdown-menu {
+  width: 180px;
+  height: 330px;
+ }
+
+ .dropdown-menu input {
+  width: 165px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menuc {
+  width: 180px !important;
+  height: 270px;
+ }
+
+ .dropdown-menuc input {
+  width: 160px !important;
+  height: 35px !important;
+ }
+
+
+ .footer {
+  width: 100%;
+  height: 12vh;
+ }
+
+ .footer .footerbtn {
+  width: 100%;
+  height: 8vh;
+ }
+
+ .footer .footerbtn .fibtn {
+  width: 160px;
+  margin-left: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+ }
+
+ .footer .footerbtn .downloadbtn {
+  width: 180px;
+  height: 100%;
+  margin-left: 10px;
+ }
+
+ .abt {
+  width: 65px;
+  height: 40px;
+  font-size: 13px;
+ }
+
+ .dis {
+  width: 80px;
+  height: 40px;
+  font-size: 13px;
+ }
+
+ .what {
+  width: 65px;
+  height: 40px;
+  font-size: 13px;
+ }
+
+ .mess {
+  width: 75px;
+  height: 40px;
+  font-size: 13px;
+ }
+
+ .dow {
+  width: 180px;
+  height: 40px;
+  font-size: 13px;
+ }
+
+ .fa-download {
+  margin-right: 10px;
+ }
+
+ .fa-whatsapp {
+  margin-right: 10px;
+ }
+
+ .footer .footerbtn .fibbtn {
+  height: 100%;
+  margin-left: 10px;
+  width: 160px;
+ }
+
+ .footer h2 {
+  color: #3049A1;
+  font-size: 12px;
+ }
+
+
+ .headings {
+  background-color: #FFFFFF;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 520px;
+ }
+
+ .headings h1 {
+  margin-top: -90px;
+  font-family: Poppins;
+  color: #2A3855;
+  font-size: 25px;
+ }
+
+ .headings h4 {
+  margin-top: 20px;
+  font-family: Pacifico;
+  font-size: 13px;
+  color: #51526e;
+ }
+
+
+ /*mainpage search */
+
+ .headings .seac .seacon {
+  margin-top: 40px;
+  height: 8vh;
+  width: 480px;
+ }
+
+ .headings .seac .seacon input {
+  background-color: #FFFFFF;
+  height: 5vh;
+  width: 114px;
+  font-size: 10px;
+  color: #444752;
+
+ }
+
+ .headings .seac .seacon .dropdown-togglem {
+  height: 5vh;
+  font-size: 10px;
+  width: 104px;
+ }
+
+ .headings .seac .seacon .dropdown-togglemm {
+  height: 5vh;
+  width: 104px;
+  font-size: 10px;
+ }
+
+ .headings .seac .seacon .filtbtn {
+  width: 25px;
+  height: 25px;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .headings .seac .seacon .searbtn {
+  width: 90px;
+  font-size: 10px;
+  height: 30px;
+ }
+
+ .dropdown-menum {
+  width: 180px;
+  height: 300px;
+ }
+
+ .dropdown-menum input {
+  width: 165px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menumm {
+  width: 165px !important;
+  height: 260px;
+ }
+
+ .dropdown-menumm input {
+  width: 150px !important;
+  height: 35px !important;
+ }
+
+
+ .headings .fildrop {
+  width: 450px;
+  top: 405px;
+  margin-left: -235px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+  height: 300px;
+ }
+
+ .fildrop {
+  z-index: 1;
+  display: none;
+  background-color: #FFFFFF;
+ }
+
+ .headings .fildrop .card-top {
+  width: 100%;
+  height: 6vh;
+  margin-bottom: 10px;
+ }
+
+ .headings .fildrop .card-top label {
+  margin-left: 40px;
+  margin-top: 5px;
+  font-size: 13px;
+ }
+
+ .headings .fildrop .card-top .checkcon {
+  width: 400px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .headings .fildrop .card-top .holdcheck {
+  width: 140px;
+  margin-left: -60px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-top .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10;
+  font-size: 13px;
+ }
+
+ .headings .fildrop .card-top input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+ .headings .fildrop .card-body {
+  width: 100%;
+  height: 140px;
+ }
+
+ .headings .fildrop .card-body label {
+  margin-left: 40px;
+  margin-top: 5px;
+  color: #1a1b29;
+  font-size: 13px;
+  font-family: Roboto;
+ }
+
+ .checkcon {
+  width: 399px;
+  margin-left: 40px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: left;
+  margin-top: 10px;
+ }
+
+ .holdcheck {
+  width: 100px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-body .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10px;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-body input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+
+ .headings .fildrop .card-body button {
+  width: 110px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 13px;
+  height: 4vh;
+  color: #7A82A6;
+ }
+
+ .headings .fildrop .card-footer {
+  width: 100%;
+  height: 5vh;
+ }
+
+ .headings .fildrop .card-footer button {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  font-size: 10px;
+  height: 4vh;
+ }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+
+ .navbar {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .navbar .logo {
+  justify-content: right !important;
+  height: 100%;
+  width: 100px;
+ }
+
+ .navbar .logo h1 {
+  font-size: 21.172px;
+ }
+
+ .navbar .tabs {
+  width: 50px !important;
+  margin-right: 0px;
+ }
+
+ .navbar .tabs button {
+  width: 20px;
+  margin-left: 20px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 10px;
+ }
+
+ .navbar .sidebuttons {
+  height: 100%;
+  width: 250px;
+ }
+
+ .navbar .sidebuttons .searchfa {
+  width: 30px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .userfa {
+  width: 90px;
+  height: 35px;
+  font-size: 12px;
+ }
+
+ .navbar .sidebuttons .plusfa {
+  width: 100px;
+  font-size: 10px;
+  height: 35px;
+ }
+
+ .fa-user {
+  margin-left: 8px;
+ }
+
+ .fa-plus {
+  margin-right: 10px;
+ }
+
+ .searchover .navbar .fa-times-circle {
+  font-size: 15px;
+ }
+
+ .searchover .navbar {
+  height: 13vh;
+ }
+
+ .searchover .navbar .seac {
+  width: 350px;
+  height: 10vh;
+ }
+
+ .searchover .navbar .seac .seacon {
+  background-color: #FFFFFF;
+  height: 6vh;
+  width: 300px;
+ }
+
+ .searchover .navbar .seac .seacon input {
+  height: 3vh;
+  font-size: 8px;
+  width: 90px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-toggle {
+  height: 3vh;
+  font-size: 8px;
+  width: 85px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-togglec {
+  height: 3vh;
+  font-size: 8px;
+  width: 85px;
+
+ }
+
+ .searchover .navbar .seac .searbtn {
+  width: 41px;
+  height: 25px;
+  display: flex;
+  border-radius: 5px;
+  font-size: 9px;
+  align-items: center;
+  justify-content: center;
+ }
+
+
+ .dropdown-menu {
+  width: 180px;
+  height: 330px;
+ }
+
+ .dropdown-menu input {
+  width: 165px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menuc {
+  width: 180px !important;
+  height: 270px;
+ }
+
+ .dropdown-menuc input {
+  width: 160px !important;
+  height: 35px !important;
+ }
+
+
+ .footer {
+  width: 100%;
+  height: 10vh;
+ }
+
+ .footer .footerbtn {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .footer .footerbtn .fibtn {
+  width: 130px;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+ }
+
+ .footer .footerbtn .downloadbtn {
+  width: 135px;
+  height: 100%;
+  margin-left: 0px;
+ }
+
+ .abt {
+  width: 45px;
+  height: 30px;
+  font-size: 9px;
+ }
+
+ .dis {
+  width: 60px;
+  height: 30px;
+  font-size: 9px;
+ }
+
+ .what {
+  width: 47px;
+  height: 30px;
+  font-size: 8px;
+ }
+
+ .mess {
+  width: 60px;
+  height: 30px;
+  font-size: 9px;
+ }
+
+ .dow {
+  width: 110px;
+  height: 30px;
+  font-size: 9px;
+ }
+
+ .fa-download {
+  margin-right: 10px;
+ }
+
+ .fa-whatsapp {
+  margin-right: 10px;
+ }
+
+ .footer .footerbtn .fibbtn {
+  height: 100%;
+  margin-left: -5px;
+  width: 130px;
+ }
+
+ .footer h2 {
+  color: #3049A1;
+  font-size: 10px;
+ }
+
+
+ .headings {
+  background-color: #FFFFFF;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 690px;
+ }
+
+ .headings h1 {
+  margin-top: -90px;
+  font-family: Poppins;
+  color: #2A3855;
+  font-size: 25px;
+ }
+
+ .headings h4 {
+  margin-top: 20px;
+  font-family: Pacifico;
+  font-size: 13px;
+  color: #51526e;
+ }
+
+
+ /*mainpage search */
+
+ .headings .seac .seacon {
+  margin-top: 40px;
+  height: 6vh;
+  width: 380px;
+ }
+
+ .headings .seac .seacon input {
+  background-color: #FFFFFF;
+  height: 4vh;
+  width: 84px;
+  font-size: 8px;
+  color: #444752;
+
+ }
+
+ .headings .seac .seacon .dropdown-togglem {
+  height: 4vh;
+  font-size: 8px;
+  width: 74px;
+ }
+
+ .headings .seac .seacon .dropdown-togglemm {
+  height: 4vh;
+  width: 74px;
+  font-size: 8px;
+ }
+
+ .headings .seac .seacon .filtbtn {
+  width: 13px;
+  height: 25px;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .headings .seac .seacon .searbtn {
+  width: 65px;
+  font-size: 6px;
+  height: 25px;
+ }
+
+ .dropdown-menum {
+  width: 130px;
+  height: 200px;
+ }
+
+ #dropdown-optionsm,
+ #dropdown-optionsmm {
+  height: 140px;
+ }
+
+ .dropdown-menum input {
+  width: 145px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menumm {
+  width: 165px !important;
+  height: 200px;
+ }
+
+ .dropdown-menumm input {
+  width: 150px !important;
+  height: 35px !important;
+ }
+
+
+ .headings .fildrop {
+  width: 350px;
+  top: 515px;
+  margin-left: -185px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+  height: 300px;
+ }
+
+ .fildrop {
+  z-index: 1;
+  display: none;
+  background-color: #FFFFFF;
+ }
+
+ .headings .fildrop .card-top {
+  width: 100%;
+  height: 6vh;
+  margin-bottom: 10px;
+ }
+
+ .headings .fildrop .card-top label {
+  margin-left: 40px;
+  margin-top: 5px;
+  font-size: 13px;
+ }
+
+ .headings .fildrop .card-top .checkcon {
+  width: 300px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .headings .fildrop .card-top .holdcheck {
+  width: 140px;
+  margin-left: -10px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-top .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10;
+  font-size: 13px;
+ }
+
+ .headings .fildrop .card-top input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+ .headings .fildrop .card-body {
+  width: 100%;
+  height: 140px;
+ }
+
+ .headings .fildrop .card-body label {
+  margin-left: 40px;
+  margin-top: 5px;
+  color: #1a1b29;
+  font-size: 13px;
+  font-family: Roboto;
+ }
+
+ .checkcon {
+  width: 299px;
+  margin-left: 40px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: left;
+  margin-top: 10px;
+ }
+
+ .holdcheck {
+  width: 100px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-body .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10px;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-body input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+
+ .headings .fildrop .card-body button {
+  width: 110px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 13px;
+  height: 4vh;
+  color: #7A82A6;
+ }
+
+ .headings .fildrop .card-footer {
+  width: 100%;
+  align-items: center;
+  height: 4vh;
+ }
+
+ .headings .fildrop .card-footer button {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  font-size: 10px;
+  height: 3vh;
+ }
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+
+ .navbar {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .navbar .logo {
+  align-items: center;
+  justify-content: right !important;
+  height: 100%;
+  width: 60px;
+ }
+
+ .navbar .logo h1 {
+  font-size: 14.172px;
+ }
+
+ .navbar .tabs {
+  width: 30px !important;
+  margin-right: 10px;
+ }
+
+ .navbar .tabs .tab {
+  width: 10px !important;
+  margin-left: 10px;
+  height: 25px !important;
+  border-radius: 5px;
+  font-size: 6px;
+ }
+
+ .navbar .sidebuttons {
+  height: 100%;
+  width: 200px;
+ }
+
+ .navbar .sidebuttons .searchfa {
+  width: 27px;
+  height: 35px;
+  font-size: 6px;
+ }
+
+ .navbar .sidebuttons .userfa {
+  width: 60px;
+  height: 25px;
+  font-size: 6px;
+ }
+
+ .navbar .sidebuttons .plusfa {
+  width: 71px;
+  font-size: 6px;
+  height: 25px;
+ }
+
+ .fa-user {
+  margin-left: 8px;
+ }
+
+ .fa-plus {
+  margin-right: 10px;
+ }
+
+ .searchover .navbar .fa-times-circle {
+  font-size: 15px;
+ }
+
+ .searchover .navbar {
+  height: 10vh;
+ }
+
+ .searchover .navbar .seac {
+  margin-top: 1vh;
+  width: 250px;
+  height: 8vh;
+ }
+
+ .searchover .navbar .seac .seacon {
+  background-color: #FFFFFF;
+  height: 5vh;
+  width: 200px;
+ }
+
+ .searchover .navbar .seac .seacon input {
+  height: 3vh;
+  font-size: 7px;
+  width: 70px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-toggle {
+  height: 3vh;
+  font-size: 7px;
+  width: 60px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-togglec {
+  height: 3vh;
+  font-size: 7px;
+  width: 60px;
+
+ }
+
+ .searchover .navbar .seac .searbtn {
+  width: 41px;
+  height: 20px;
+  display: flex;
+  border-radius: 5px;
+  font-size: 7px;
+  align-items: center;
+  justify-content: center;
+ }
+
+
+ .dropdown-menu {
+  width: 180px;
+  height: 330px;
+ }
+
+ .dropdown-menu input {
+  width: 165px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menuc {
+  width: 180px !important;
+  height: 270px;
+ }
+
+ .dropdown-menuc input {
+  width: 160px !important;
+  height: 35px !important;
+ }
+
+
+ .footer {
+  width: 100%;
+  height: 10vh;
+ }
+
+ .footer .footerbtn {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .footer .footerbtn .fibtn {
+  width: 80px;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+ }
+
+ .footer .footerbtn .downloadbtn {
+  width: 105px;
+  height: 100%;
+  margin-left: 0px;
+ }
+
+ .abt {
+  width: 35px;
+  border-radius: 2px;
+  height: 20px;
+  font-size: 6px;
+ }
+
+ .dis {
+  width: 40px;
+  border-radius: 2px;
+  height: 20px;
+  font-size: 6px;
+ }
+
+ .what {
+  width: 47px;
+  border-radius: 2px;
+  height: 20px;
+  font-size: 6px;
+ }
+
+ .mess {
+  width: 40px;
+  border-radius: 2px;
+  height: 20px;
+  font-size: 6px;
+ }
+
+ .dow {
+  width: 80px;
+  border-radius: 2px;
+  height: 20px;
+  font-size: 6px;
+ }
+
+ .fa-download {
+  margin-right: 0px;
+ }
+
+ .fa-whatsapp {
+  margin-right: 10px;
+ }
+
+ .footer .footerbtn .fibbtn {
+  height: 100%;
+  margin-left: -5px;
+  width: 92px;
+ }
+
+ .footer h2 {
+  color: #3049A1;
+  font-size: 8px;
+ }
+
+
+ .headings {
+  background-color: #FFFFFF;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 670px;
+ }
+
+ .headings h1 {
+  margin-top: -90px;
+  font-family: Poppins;
+  color: #2A3855;
+  font-size: 18px;
+ }
+
+ .headings h4 {
+  margin-top: 20px;
+  font-family: Pacifico;
+  font-size: 10px;
+  color: #51526e;
+ }
+
+
+ /*mainpage search */
+
+ .headings .seac .seacon {
+  margin-top: 40px;
+  height: 6vh;
+  width: 280px;
+  border-radius: 5px;
+ }
+
+ .headings .seac .seacon input {
+  background-color: #FFFFFF;
+  height: 4vh;
+  width: 64px;
+  font-size: 6px;
+  color: #444752;
+
+ }
+
+ .headings .seac .seacon .dropdown-togglem {
+  height: 4vh;
+  font-size: 6px;
+  width: 48px;
+ }
+
+ .headings .seac .seacon .dropdown-togglemm {
+  height: 4vh;
+  width: 48px;
+  font-size: 6px;
+ }
+
+ .headings .seac .seacon .filtbtn {
+  width: 10px;
+  height: 12px;
+  border-radius: 0;
+  font-size: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .headings .seac .seacon .searbtn {
+  width: 60px;
+  font-size: 5px;
+  height: 20px;
+  border-radius: 3px;
+ }
+
+ .dropdown-menum {
+  width: 130px;
+  height: 200px;
+ }
+
+ #dropdown-optionsm,
+ #dropdown-optionsmm {
+  height: 140px;
+ }
+
+ .dropdown-menum input {
+  width: 145px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menumm {
+  width: 165px !important;
+  height: 200px;
+ }
+
+ .dropdown-menumm input {
+  width: 150px !important;
+  height: 35px !important;
+ }
+
+
+ .headings .fildrop {
+  width: 250px;
+  top: 470px;
+  margin-left: -135px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+  height: 300px;
+ }
+
+ .fildrop {
+  z-index: 1;
+  display: none;
+  background-color: #FFFFFF;
+ }
+
+ .headings .fildrop .card-top {
+  width: 100%;
+  height: 6vh;
+  margin-bottom: 10px;
+ }
+
+ .headings .fildrop .card-top label {
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 13px;
+ }
+
+ .headings .fildrop .card-top .checkcon {
+  width: 220px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .headings .fildrop .card-top .holdcheck {
+  width: 110px;
+  margin-left: -50px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-top .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10;
+  font-size: 10px;
+ }
+
+ .headings .fildrop .card-top input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+ .headings .fildrop .card-body {
+  width: 100%;
+  height: 140px;
+ }
+
+ .headings .fildrop .card-body label {
+  margin-left: 10px;
+  margin-top: 5px;
+  color: #1a1b29;
+  font-size: 13px;
+  font-family: Roboto;
+ }
+
+ .checkcon {
+  width: 229px;
+  margin-left: 40px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: left;
+  margin-top: 10px;
+ }
+
+ .holdcheck {
+  width: 100px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 20px;
+  margin-left: -25px
+ }
+
+ .headings .fildrop .card-body .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10px;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-body input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+
+ .headings .fildrop .card-body button {
+  width: 110px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 13px;
+  height: 4vh;
+  color: #7A82A6;
+ }
+
+ .headings .fildrop .card-footer {
+  width: 100%;
+  align-items: center;
+  height: 4vh;
+ }
+
+ .headings .fildrop .card-footer button {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  height: 3vh;
+ }
+}
+
+@media (min-width: 280px) and (max-width: 299px) {
+
+ .navbar {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .navbar .logo {
+  align-items: center;
+  justify-content: right !important;
+  height: 100%;
+  width: 50px;
+ }
+
+ .navbar .logo h1 {
+  margin-top: 10px;
+  font-size: 10.172px;
+ }
+
+ .navbar .tabs {
+  width: 30px !important;
+  margin-right: 10px;
+ }
+
+ .navbar .tabs .btn {
+  width: 10px !important;
+  margin-left: 10px;
+  height: 25px !important;
+  border-radius: 5px;
+  font-size: 6px;
+ }
+
+ .navbar .sidebuttons {
+  height: 100%;
+  width: 200px;
+ }
+
+ .navbar .sidebuttons .searchfa {
+  width: 27px;
+  height: 35px;
+  font-size: 6px;
+ }
+
+ .navbar .sidebuttons .userfa {
+  width: 60px;
+  height: 25px;
+  font-size: 6px;
+ }
+
+ .navbar .sidebuttons .plusfa {
+  width: 71px;
+  font-size: 6px;
+  height: 25px;
+ }
+
+ .fa-user {
+  margin-left: 8px;
+ }
+
+ .fa-plus {
+  margin-right: 10px;
+ }
+
+ .searchover .navbar .fa-times-circle {
+  font-size: 15px;
+ }
+
+ .searchover .navbar {
+  height: 10vh;
+ }
+
+ .searchover .navbar .seac {
+  margin-top: 1vh;
+  width: 240px;
+  height: 8vh;
+ }
+
+ .searchover .navbar .seac .seacon {
+  background-color: #FFFFFF;
+  height: 5vh;
+  width: 190px;
+ }
+
+ .searchover .navbar .seac .seacon input {
+  height: 3vh;
+  font-size: 7px;
+  width: 65px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-toggle {
+  height: 3vh;
+  font-size: 7px;
+  width: 55px;
+ }
+
+ .searchover .navbar .seac .seacon .dropdown-togglec {
+  height: 3vh;
+  font-size: 7px;
+  width: 55px;
+
+ }
+
+ .searchover .navbar .seac .searbtn {
+  width: 41px;
+  height: 20px;
+  display: flex;
+  border-radius: 5px;
+  font-size: 7px;
+  align-items: center;
+  justify-content: center;
+ }
+
+
+ .dropdown-menu {
+  width: 100%;
+  height: 330px;
+ }
+
+ .dropdown-menu input {
+  width: 145px !important;
+  height: 25px !important;
+ }
+
+ .dropdown-menuc {
+  width: 100% !important;
+  height: 270px;
+  margin-left: -45px;
+ }
+
+ .dropdown-menuc input {
+  width: 130px !important;
+  height: 25px !important;
+ }
+
+
+ .footer {
+  width: 100%;
+  height: 10vh;
+ }
+
+ .footer .footerbtn {
+  width: 100%;
+  height: 6vh;
+ }
+
+ .footer .footerbtn .fibtn {
+  width: 80px;
+  margin-left: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+ }
+
+ .footer .footerbtn .downloadbtn {
+  width: 105px;
+  height: 100%;
+  margin-left: 0px;
+ }
+
+ .abt {
+  width: 35px;
+  border-radius: 2px;
+  height: 20px;
+  font-size: 6px;
+ }
+
+ .dis {
+  width: 40px;
+  border-radius: 2px;
+  height: 20px;
+  font-size: 6px;
+ }
+
+ .what {
+  width: 47px;
+  border-radius: 2px;
+  height: 20px;
+  font-size: 6px;
+ }
+
+ .mess {
+  width: 40px;
+  border-radius: 2px;
+  height: 20px;
+  font-size: 6px;
+ }
+
+ .dow {
+  width: 80px;
+  border-radius: 2px;
+  height: 20px;
+  font-size: 6px;
+ }
+
+ .fa-download {
+  margin-right: 0px;
+ }
+
+ .fa-whatsapp {
+  margin-right: 10px;
+ }
+
+ .footer .footerbtn .fibbtn {
+  height: 100%;
+  margin-left: -5px;
+  width: 92px;
+ }
+
+ .footer h2 {
+  color: #3049A1;
+  font-size: 8px;
+ }
+
+
+ .headings {
+  background-color: #FFFFFF;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 490px;
+ }
+
+ .headings h1 {
+  margin-top: -90px;
+  font-family: Poppins;
+  color: #2A3855;
+  font-size: 16px;
+ }
+
+ .headings h4 {
+  margin-top: 20px;
+  font-family: Pacifico;
+  font-size: 10px;
+  color: #51526e;
+ }
+
+
+ /*mainpage search */
+
+ .headings .seac .seacon {
+  margin-top: 40px;
+  height: 6vh;
+  width: 270px;
+  border-radius: 3px;
+ }
+
+ .headings .seac .seacon input {
+  background-color: #FFFFFF;
+  height: 4vh;
+  width: 60px;
+  font-size: 4px;
+  color: #444752;
+
+ }
+
+ .headings .seac .seacon .dropdown-togglem {
+  height: 4vh;
+  font-size: 4px;
+  width: 50px;
+ }
+
+ .headings .seac .seacon .dropdown-togglemm {
+  height: 4vh;
+  width: 50px;
+  font-size: 4px;
+ }
+
+ .headings .seac .seacon .filtbtn {
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+  font-size: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .headings .seac .seacon .searbtn {
+  width: 60px;
+  font-size: 5px;
+  height: 16px;
+  border-radius: 3px;
+ }
+
+ .dropdown-menum {
+  width: 130px;
+  height: 200px;
+ }
+
+ #dropdown-optionsm,
+ #dropdown-optionsmm {
+  height: 140px;
+ }
+
+ .dropdown-menum input {
+  width: 145px !important;
+  height: 35px !important;
+ }
+
+ .dropdown-menumm {
+  width: 100% !important;
+  height: 200px;
+  margin-left: -15px;
+ }
+
+ .dropdown-menumm input {
+  width: 120px !important;
+  height: 25px !important;
+ }
+
+
+ .headings .fildrop {
+  width: 250px;
+  top: 360px;
+  margin-left: -135px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.219);
+  height: 280px;
+ }
+
+ .fildrop {
+  z-index: 1;
+  display: none;
+  background-color: #FFFFFF;
+ }
+
+ .headings .fildrop .card-top {
+  width: 100%;
+  height: 6vh;
+  margin-bottom: 8px;
+ }
+
+ .headings .fildrop .card-top label {
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 13px;
+ }
+
+ .headings .fildrop .card-top .checkcon {
+  width: 220px;
+  height: 20px;
+  margin-top: 10px;
+ }
+
+ .headings .fildrop .card-top .holdcheck {
+  width: 110px;
+  margin-left: 7px;
+  height: 20px;
+ }
+
+ .headings .fildrop .card-top .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10;
+  font-size: 10px;
+ }
+
+ .headings .fildrop .card-top input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+ .headings .fildrop .card-body {
+  width: 100%;
+  height: 140px;
+ }
+
+ .headings .fildrop .card-body label {
+  margin-left: 10px;
+  margin-top: 5px;
+  color: #1a1b29;
+  font-size: 13px;
+  font-family: Roboto;
+ }
+
+ .checkcon {
+  width: 229px;
+  margin-left: 0px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: left;
+  margin-top: 10px;
+ }
+
+ .holdcheck {
+  width: 100px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 20px;
+  margin-left: 7px
+ }
+
+ .headings .fildrop .card-body .checkcon label {
+  color: #51526e;
+  margin-top: 0;
+  margin-left: 10px;
+  font-size: 14px;
+ }
+
+ .headings .fildrop .card-body input {
+  width: 15px !important;
+  height: 15px !important;
+ }
+
+
+
+ .headings .fildrop .card-body button {
+  width: 110px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 13px;
+  height: 4vh;
+  outline: none;
+  border: 0;
+  color: #7A82A6;
+ }
+
+ .headings .fildrop .card-footer {
+  width: 100%;
+  align-items: center;
+  height: 4vh;
+ }
+
+ .headings .fildrop .card-footer button {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  height: 4vh;
+ }
+}
