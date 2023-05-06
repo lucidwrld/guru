@@ -1,43 +1,60 @@
+/* getting the buttons and slide for the search slide */
+/* search button on navbar */
 let searchfa = document.querySelector(".searchfa")
+/* close button on search slide */
 let timesfa = document.querySelector(".timesfa")
+/* search slide */
 let searchover = document.querySelector(".searchover")
 
-const optionsList = document.querySelectorAll(".option");
+/* creating a addeventlistener to note every click of the search button */
 searchfa.addEventListener('click', function () {
  console.log("sdasd")
+ /*  changing style to make the search slide appear by sliding down */
  searchover.style.transform = "translate(0%)"
 })
+/* creating a addeventlistener to note every click of the close button */
 timesfa.addEventListener('click', function () {
  console.log("sdasd")
+ /*  changing style to make the search slide disappear by sliding up*/
  searchover.style.transform = "translateY(-100%)"
 })
 
+/* getting the buttons and dropdown for the category  */
 const dropdownToggle = document.getElementById('dropdownMenuButton');
 const dropdownMenu = document.querySelector('.dropdown-menu');
 const dropdownSearch = document.getElementById('dropdown-search');
 const dropdownOptions = document.querySelectorAll('.dropdown-item');
 
+/* creating a addeventlistener to note every click of on the button */
 dropdownToggle.addEventListener('click', () => {
+ /* changing style to make dropdown menu for category if on display none to change to nothing */
  dropdownMenu.style.display = ""
+ /* toggle dropmenu for category to show*/
  dropdownMenu.classList.toggle('show');
+ /* changing style for dropdown menu for location to display none */
  dropdownMenuc.style.display = "none"
  console.log("sdas")
 });
-
+/* creating a addeventlistener to note every input of on the search input  */
 dropdownSearch.addEventListener('input', () => {
+ /* changing every value in input to lowercase */
  const searchValue = dropdownSearch.value.toLowerCase();
+ /* looping for every option value in dropdown menu for category */
  for (let i = 0; i < dropdownOptions.length; i++) {
   const option = dropdownOptions[i];
+  /* changing every value in option to lowercase */
   const text = option.textContent.toLowerCase();
   if (text.includes(searchValue)) {
+   /* display the option if it correlates with value in input */
    option.style.display = "";
   } else {
+   /* do not display the option if it does not correlate with value in input */
    option.style.display = "none";
   }
  }
 });
 
-
+/* same syntax of dropmenu of category */
 const dropdownTogglec = document.getElementById('dropdownMenuButtonc');
 const dropdownMenuc = document.querySelector('.dropdown-menuc');
 const dropdownSearchc = document.getElementById('dropdown-searchc');
@@ -65,7 +82,7 @@ dropdownSearchc.addEventListener('input', () => {
 
 
 /*mainpage toggling*/
-
+/* same syntax of dropmenu of category */
 const dropdownTogglem = document.getElementById('dropdownMenuButtonm');
 const dropdownMenum = document.querySelector('.dropdown-menum');
 const dropdownSearchm = document.getElementById('dropdown-searchm');
@@ -91,7 +108,7 @@ dropdownSearchm.addEventListener('input', () => {
  }
 });
 
-
+/* same syntax of dropmenu of category */
 const dropdownTogglemm = document.getElementById('dropdownMenuButtonmm');
 const dropdownMenumm = document.querySelector('.dropdown-menumm');
 const dropdownSearchmm = document.getElementById('dropdown-searchmm');
@@ -116,12 +133,15 @@ dropdownSearchmm.addEventListener('input', () => {
   }
  }
 });
+
 const filterdrop = document.getElementById('filterdrop');
 const filterdropmenu = document.querySelector('.fildrop');
 filterdrop.addEventListener('click', () => {
  filterdropmenu.classList.toggle('show');
  console.log("sdas")
 });
+
+/*same syntax as search slide */
 const menu = document.getElementById('tab');
 const dropmen = document.querySelector('.tabdrop');
 const ttimesfa = document.querySelector(".ttimesfa")

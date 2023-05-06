@@ -5,10 +5,13 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Document</title>
+ <!-- calling font awesome cdn -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!-- calling bootstrap cdn -->
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+ <!-- calling specific fonts -->
  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
@@ -17,7 +20,9 @@
 
 
 <body>
+ <!-- creating a main container for everything -->
  <div class="cont bg-light">
+  <!-- creating container for tab menu for screen size 999px and below -->
   <div class="tabdrop" id="tabdrop">
    <div class="close fixed-top">
     <button class="btn ttimesfa" id="ttimesfa"> <i class="fa fa-times-square"></i></button>
@@ -32,10 +37,13 @@
     <li><a href="">Sign Up</a></li>
    </ul>
   </div>
+  <!-- creating fixed navigation bar  -->
   <nav class="navbar navbar-expand bg-light fixed-top">
+   <!--   company's logo -->
    <div class="logo">
     <h1>Bizlagos</h1>
    </div>
+   <!-- tabs for pages -->
    <div class="tabs">
     <button class="btn fw-bolder tab" id="tab"><i class="fa fa-bars"></i></button>
 
@@ -48,6 +56,7 @@
 
     </ul>
    </div>
+   <!-- buttons for search, add listing and sign in -->
    <div class="sidebuttons">
     <button class="btn searchfa" id="searchfa"><i class="fa fa-search
      "></i></button>
@@ -55,16 +64,21 @@
     <button class="btn plusfa fw-semibold"><i class="fa fa-plus"></i>Add Listing</button>
    </div>
   </nav>
+  <!-- search slide -->
   <div class="searchover" id="searchover">
+   <!-- creating navigation bar for search slide -->
    <nav class="navbar navbar-expand ">
+    <!-- creating a fixed top container for close button -->
     <div class="close fixed-top ">
      <button class="btn timesfa" id="timesfa"> <i class="fa fa-times-circle"></i></button>
     </div>
     <div class="seac">
+     <!-- creating form to accept input -->
      <form action="" class="seac">
       <div class="seacon">
+       <!-- search input -->
        <input class="fw-semibold" type="text" placeholder="What are you looking for?">
-
+       <!-- dropdown menu for category -->
        <div class="dropdown">
         <button class="dropdown-toggle fw-semibold" type="button" id="dropdownMenuButton" aria-haspopup="true"
          aria-expanded="false">
@@ -84,7 +98,7 @@
         </div>
        </div>
 
-
+       <!-- dropdown menu for location -->
        <div class="dropdownc">
         <button class="dropdown-toggle dropdown-togglec fw-semibold" type="button" id="dropdownMenuButtonc"
          aria-haspopup="true" aria-expanded="false">
@@ -106,19 +120,26 @@
 
 
       </div>
+      <!-- search button -->
       <button class="btn searbtn fw-semibold">Search</button>
      </form>
     </div>
    </nav>
   </div>
+
+  <!-- creating container for main content -->
   <div class="headings">
+   <!--  heading for main title -->
    <h1>Find all Businesses in Lagos</h1>
+   <!-- heading for subtitle -->
    <h4>Find Freelancers, agencies, vendors, artisans ...</h4>
    <div class="seac">
+    <!-- form to accept inputs -->
     <form action="" class="seac" onsubmit="return false">
      <div class="seacon">
+      <!--  search input -->
       <input class="fw-semibold" type="text" placeholder="What are you looking for?">
-
+      <!-- dropdown menu for category for main content -->
       <div class="dropdownm">
        <button class="dropdown-toggle dropdown-togglem fw-semibold" type="button" id="dropdownMenuButtonm"
         aria-haspopup="true" aria-expanded="false">
@@ -138,7 +159,7 @@
        </div>
       </div>
 
-
+      <!-- dropdown menu for location for main content -->
       <div class="dropdownmm">
        <button class="dropdown-toggle dropdown-togglemm fw-semibold" type="button" id="dropdownMenuButtonmm"
         aria-haspopup="true" aria-expanded="false">
@@ -157,15 +178,19 @@
         </div>
        </div>
       </div>
+      <!-- filter dropdown button -->
       <button class="btn filtbtn fw-semibold" id="filterdrop"><i class="fa fa-filter"></i></button>
+      <!-- search button -->
       <button class="btn searbtn fw-semibold">Search Listing</button>
 
      </div>
     </form>
    </div>
 
+   <!-- form for accepting input in filter dropdown -->
    <form action="" onsubmit="return false">
     <card class="dropdown-menu fildrop " aria-labelledby="filterdrop">
+     <!-- container for context in dropdown menu -->
      <div class="card-top fw-bold">
       <label for="Business Status">Business Status</label>
       <div class="checkcon">
@@ -181,6 +206,7 @@
 
       </div>
      </div>
+     <!-- container for context in dropdown menu -->
      <div class="card-top fw-bold">
       <label for="Business Status">Business Type</label>
       <div class="checkcon">
@@ -196,6 +222,7 @@
 
       </div>
      </div>
+     <!-- container for context in dropdown menu -->
      <div class="card-body tAG fw-bold">
       <label for="Business Status">Tags</label>
       <div class="checkcon chek">
@@ -216,37 +243,45 @@
         <label class="fw-semibold" for="">3D Panel</label>
        </div>
 
-
-
       </div>
+      <!--  button to toggle more options in the container  -->
       <button class="btn" id="showbtn">Show More <i class="fa fa-arrow-down"></i></button>
      </div>
      <div class="card-footer bg-light">
-      <button class="btn fil fw-bolder" id="resetfil">Reset Filters</button>
+      <!-- button to reset form -->
+      <input type="reset" value="Reset Filters" class=" fil fw-bolder" id="resetfil">
+      <!-- button to submit form -->
       <button class="btn fil fw-bolder" id="applyfil">Apply Filters</button>
      </div>
 
     </card>
    </form>
   </div>
+  <!-- creating container for footer content -->
   <div class="footer bg-light">
    <div class="footerbtn ">
+    <!-- container for about and disclaimer button -->
     <div class="fibtn">
      <button class="abt fw-bolder">About</button>
      <button class="dis fw-bolder">Disclaimer</button>
     </div>
+    <!-- container for download listings button -->
     <div class="downloadbtn">
      <button class="dow fw-bolder"><i class="fa fa-download"></i>Download Listings</button>
     </div>
+    <!-- container for chat and message button -->
     <div class="fibbtn">
      <button class="what fw-bolder"><i class="fa-brands fa-whatsapp"></i>Chat</button>
      <button class="mess fw-bolder">Message</button>
     </div>
    </div>
+   <!-- Copyright -->
    <h2 class="fw-bold">Copyright &copy; 2022. Bizlalgos. All Rights Reserved</h2>
   </div>
  </div>
+ <!-- calling js file -->
  <script src="Homebiz.js"></script>
+ <!-- calling bootstrap js file -->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
 </body>
 

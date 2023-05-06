@@ -11,10 +11,12 @@ body {
  padding: 0;
 }
 
+/* setting links to not have any text decoration */
 a {
  text-decoration: none;
 }
 
+/* navbar */
 .navbar {
  width: 100%;
  height: 15vh;
@@ -26,14 +28,17 @@ a {
  flex-direction: row;
 }
 
+/* setting tabs menu button to display none */
 .navbar .tabs button {
  display: none;
 }
 
+/* setting tabs menu slide to display none */
 .tabdrop {
  display: none;
 }
 
+/* navbar context */
 .navbar .logo {
  height: 100%;
  display: flex;
@@ -145,6 +150,8 @@ a {
  margin-right: 10px;
 }
 
+/* search slide context settings */
+
 .searchover {
  position: absolute;
  background-color: #00000031;
@@ -158,6 +165,7 @@ a {
 
 }
 
+/* search slide navbar context settings */
 .searchover .navbar {
  width: 100%;
  height: 27vh;
@@ -217,6 +225,7 @@ a {
 
 }
 
+/* dropdown menu for category and location */
 .searchover .navbar .seac .seacon .dropdown-toggle {
  background-color: #FFFFFF;
  height: 7vh;
@@ -335,6 +344,7 @@ a {
  margin-bottom: 5px;
 }
 
+/* main context settings */
 .headings {
  background-color: #FFFFFF;
  margin-top: 15vh;
@@ -387,6 +397,7 @@ a {
 
 }
 
+/* dropdown menu for category and location */
 .headings .seac .seacon .dropdown-togglem {
  background-color: #FFFFFF;
  height: 7vh;
@@ -512,6 +523,7 @@ a {
  margin-bottom: 5px;
 }
 
+/* footer context */
 .footer {
  width: 100%;
  box-shadow: 0px 1px 10px 10px rgba(0, 0, 0, 0.08);
@@ -625,6 +637,8 @@ a {
  font-size: 18px;
 }
 
+
+/* dropdown context for filter */
 .headings .fildrop {
  overflow-y: scroll;
  position: absolute;
@@ -777,6 +791,17 @@ a {
  margin-right: 20px;
  font-size: 13px;
  height: 6vh;
+ border: 0px;
+}
+
+#resetfil {
+ outline: none !important;
+ height: 6vh !important;
+ margin-left: -40px !important;
+ width: 120px !important;
+ border: 0px !important;
+ font-size: 13px;
+ background-color: transparent !important;
 }
 
 #applyfil {
@@ -786,6 +811,7 @@ a {
 
 
 /*responsiveness*/
+/*screen size between 1201 to 1300px */
 @media (min-width: 1201px) and (max-width: 1300px) {
 
  .navbar {
@@ -1180,8 +1206,19 @@ a {
   font-size: 13px;
   height: 6vh;
  }
+
+ #resetfil {
+  outline: none !important;
+  height: 6vh !important;
+  margin-left: -40px !important;
+  width: 120px !important;
+  border: 0px !important;
+  font-size: 13px;
+  background-color: transparent !important;
+ }
 }
 
+/*screen size between 1000px to 1200px */
 @media (min-width: 1000px) and (max-width: 1200px) {
 
  .navbar {
@@ -1576,8 +1613,19 @@ a {
   font-size: 13px;
   height: 6vh;
  }
+
+ #resetfil {
+  outline: none !important;
+  height: 6vh !important;
+  margin-left: -40px !important;
+  width: 120px !important;
+  border: 0px !important;
+  font-size: 13px;
+  background-color: transparent !important;
+ }
 }
 
+/*screen size between 200px to 999px */
 @media (min-width: 200px) and (max-width: 999px) {
 
  .navbar .tabs {
@@ -1661,6 +1709,7 @@ a {
 
 }
 
+/*screen size between 900px to 999px */
 @media (min-width: 900px) and (max-width: 999px) {
 
  .navbar {
@@ -2050,8 +2099,19 @@ a {
   font-size: 13px;
   height: 6vh;
  }
+
+ #resetfil {
+  outline: none !important;
+  height: 6vh !important;
+  margin-left: -40px !important;
+  width: 120px !important;
+  border: 0px !important;
+  font-size: 13px;
+  background-color: transparent !important;
+ }
 }
 
+/*screen size between 800px to 899px */
 @media (min-width: 800px) and (max-width: 899px) {
 
  .navbar {
@@ -2444,8 +2504,19 @@ a {
   font-size: 13px;
   height: 4vh;
  }
+
+ #resetfil {
+  outline: none !important;
+  height: 4vh !important;
+  margin-left: -40px !important;
+  width: 120px !important;
+  border: 0px !important;
+  font-size: 13px;
+  background-color: transparent !important;
+ }
 }
 
+/*screen size between 700px to 799px */
 @media (min-width: 700px) and (max-width: 799px) {
 
  .navbar {
@@ -2838,8 +2909,19 @@ a {
   font-size: 13px;
   height: 4vh;
  }
+
+ #resetfil {
+  outline: none !important;
+  height: 4vh !important;
+  margin-left: -40px !important;
+  width: 120px !important;
+  border: 0px !important;
+  font-size: 13px;
+  background-color: transparent !important;
+ }
 }
 
+/*screen size between 600px to 699px */
 @media (min-width: 600px) and (max-width: 699px) {
 
  .navbar {
@@ -3233,8 +3315,19 @@ a {
   font-size: 13px;
   height: 4vh;
  }
+
+ #resetfil {
+  outline: none !important;
+  height: 4vh !important;
+  margin-left: -40px !important;
+  width: 120px !important;
+  border: 0px !important;
+  font-size: 13px;
+  background-color: transparent !important;
+ }
 }
 
+/*screen size between 500px to 599px */
 @media (min-width: 500px) and (max-width: 599px) {
 
  .navbar {
@@ -3392,31 +3485,31 @@ a {
  .abt {
   width: 65px;
   height: 40px;
-  font-size: 13px;
+  font-size: 11px;
  }
 
  .dis {
   width: 80px;
   height: 40px;
-  font-size: 13px;
+  font-size: 11px;
  }
 
  .what {
   width: 65px;
   height: 40px;
-  font-size: 13px;
+  font-size: 11px;
  }
 
  .mess {
   width: 75px;
   height: 40px;
-  font-size: 13px;
+  font-size: 11px;
  }
 
  .dow {
   width: 180px;
   height: 40px;
-  font-size: 13px;
+  font-size: 11px;
  }
 
  .fa-download {
@@ -3506,7 +3599,7 @@ a {
  .headings .seac .seacon .searbtn {
   width: 90px;
   font-size: 10px;
-  height: 30px;
+  height: 25px;
  }
 
  .dropdown-menum {
@@ -3554,7 +3647,7 @@ a {
  .headings .fildrop .card-top label {
   margin-left: 40px;
   margin-top: 5px;
-  font-size: 13px;
+  font-size: 11px;
  }
 
  .headings .fildrop .card-top .checkcon {
@@ -3573,7 +3666,7 @@ a {
   color: #51526e;
   margin-top: 0;
   margin-left: 10;
-  font-size: 13px;
+  font-size: 10px;
  }
 
  .headings .fildrop .card-top input {
@@ -3591,7 +3684,7 @@ a {
   margin-left: 40px;
   margin-top: 5px;
   color: #1a1b29;
-  font-size: 13px;
+  font-size: 11px;
   font-family: Roboto;
  }
 
@@ -3618,7 +3711,7 @@ a {
   color: #51526e;
   margin-top: 0;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 10px;
  }
 
  .headings .fildrop .card-body input {
@@ -3652,8 +3745,19 @@ a {
   font-size: 10px;
   height: 4vh;
  }
+
+ #resetfil {
+  outline: none !important;
+  height: 4vh !important;
+  margin-left: -40px !important;
+  width: 100px !important;
+  border: 0px !important;
+  font-size: 10px;
+  background-color: transparent !important;
+ }
 }
 
+/*screen size between 400px to 499px */
 @media (min-width: 400px) and (max-width: 499px) {
 
  .navbar {
@@ -3813,31 +3917,31 @@ a {
  .abt {
   width: 45px;
   height: 30px;
-  font-size: 9px;
+  font-size: 7px;
  }
 
  .dis {
   width: 60px;
   height: 30px;
-  font-size: 9px;
+  font-size: 7px;
  }
 
  .what {
   width: 47px;
   height: 30px;
-  font-size: 8px;
+  font-size: 7px;
  }
 
  .mess {
   width: 60px;
   height: 30px;
-  font-size: 9px;
+  font-size: 7px;
  }
 
  .dow {
   width: 110px;
   height: 30px;
-  font-size: 9px;
+  font-size: 7px;
  }
 
  .fa-download {
@@ -3925,8 +4029,8 @@ a {
  }
 
  .headings .seac .seacon .searbtn {
-  width: 65px;
-  font-size: 6px;
+  width: 70px;
+  font-size: 5px;
   height: 25px;
  }
 
@@ -3999,7 +4103,7 @@ a {
   color: #51526e;
   margin-top: 0;
   margin-left: 10;
-  font-size: 13px;
+  font-size: 10px;
  }
 
  .headings .fildrop .card-top input {
@@ -4044,7 +4148,7 @@ a {
   color: #51526e;
   margin-top: 0;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 10px;
  }
 
  .headings .fildrop .card-body input {
@@ -4079,8 +4183,19 @@ a {
   font-size: 10px;
   height: 3vh;
  }
+
+ #resetfil {
+  outline: none !important;
+  height: 3vh !important;
+  margin-left: -40px !important;
+  width: 100px !important;
+  border: 0px !important;
+  font-size: 10px;
+  background-color: transparent !important;
+ }
 }
 
+/*screen size between 300px to 399px */
 @media (min-width: 300px) and (max-width: 399px) {
 
  .navbar {
@@ -4243,35 +4358,35 @@ a {
   width: 35px;
   border-radius: 2px;
   height: 20px;
-  font-size: 6px;
+  font-size: 5px;
  }
 
  .dis {
   width: 40px;
   border-radius: 2px;
   height: 20px;
-  font-size: 6px;
+  font-size: 5px;
  }
 
  .what {
   width: 47px;
   border-radius: 2px;
   height: 20px;
-  font-size: 6px;
+  font-size: 5px;
  }
 
  .mess {
   width: 40px;
   border-radius: 2px;
   height: 20px;
-  font-size: 6px;
+  font-size: 5px;
  }
 
  .dow {
   width: 80px;
   border-radius: 2px;
   height: 20px;
-  font-size: 6px;
+  font-size: 5px;
  }
 
  .fa-download {
@@ -4361,8 +4476,8 @@ a {
  }
 
  .headings .seac .seacon .searbtn {
-  width: 60px;
-  font-size: 5px;
+  width: 65px;
+  font-size: 4.5px;
   height: 20px;
   border-radius: 3px;
  }
@@ -4436,7 +4551,7 @@ a {
   color: #51526e;
   margin-top: 0;
   margin-left: 10;
-  font-size: 10px;
+  font-size: 8px;
  }
 
  .headings .fildrop .card-top input {
@@ -4482,7 +4597,7 @@ a {
   color: #51526e;
   margin-top: 0;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 8px;
  }
 
  .headings .fildrop .card-body input {
@@ -4516,8 +4631,19 @@ a {
   font-size: 9px;
   height: 3vh;
  }
+
+ #resetfil {
+  outline: none !important;
+  height: 3vh !important;
+  margin-left: -40px !important;
+  width: 90px !important;
+  border: 0px !important;
+  font-size: 9px;
+  background-color: transparent !important;
+ }
 }
 
+/*screen size between 280px to 299px */
 @media (min-width: 280px) and (max-width: 299px) {
 
  .navbar {
@@ -4682,35 +4808,35 @@ a {
   width: 35px;
   border-radius: 2px;
   height: 20px;
-  font-size: 6px;
+  font-size: 4px;
  }
 
  .dis {
   width: 40px;
   border-radius: 2px;
   height: 20px;
-  font-size: 6px;
+  font-size: 4px;
  }
 
  .what {
   width: 47px;
   border-radius: 2px;
   height: 20px;
-  font-size: 6px;
+  font-size: 4px;
  }
 
  .mess {
   width: 40px;
   border-radius: 2px;
   height: 20px;
-  font-size: 6px;
+  font-size: 4px;
  }
 
  .dow {
   width: 80px;
   border-radius: 2px;
   height: 20px;
-  font-size: 6px;
+  font-size: 4px;
  }
 
  .fa-download {
@@ -4801,7 +4927,7 @@ a {
 
  .headings .seac .seacon .searbtn {
   width: 60px;
-  font-size: 5px;
+  font-size: 4px;
   height: 16px;
   border-radius: 3px;
  }
@@ -4857,7 +4983,7 @@ a {
  .headings .fildrop .card-top label {
   margin-left: 10px;
   margin-top: 5px;
-  font-size: 13px;
+  font-size: 10px;
  }
 
  .headings .fildrop .card-top .checkcon {
@@ -4876,7 +5002,7 @@ a {
   color: #51526e;
   margin-top: 0;
   margin-left: 10;
-  font-size: 10px;
+  font-size: 7px;
  }
 
  .headings .fildrop .card-top input {
@@ -4894,7 +5020,7 @@ a {
   margin-left: 10px;
   margin-top: 5px;
   color: #1a1b29;
-  font-size: 13px;
+  font-size: 10px;
   font-family: Roboto;
  }
 
@@ -4922,7 +5048,7 @@ a {
   color: #51526e;
   margin-top: 0;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 7px;
  }
 
  .headings .fildrop .card-body input {
@@ -4957,5 +5083,15 @@ a {
   justify-content: center;
   font-size: 9px;
   height: 4vh;
+ }
+
+ #resetfil {
+  outline: none !important;
+  height: 4vh !important;
+  margin-left: -40px !important;
+  width: 90px !important;
+  border: 0px !important;
+  font-size: 9px;
+  background-color: transparent !important;
  }
 }
